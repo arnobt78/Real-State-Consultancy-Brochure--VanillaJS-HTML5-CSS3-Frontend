@@ -1,5 +1,15 @@
 # REQUIREMENTS
 
+## REQ-0013 Project image refresh (approved 2026-11-02)
+
+Use the supplied 16:9 banners and ordered 4:3 gallery images on the concrete, fire safety, residential design, and solar detail pages. Use the first residential and solar gallery images on their listing cards. Share 4:3 gallery framing across project detail pages; retain the existing assessment and interior banners. Keep page copy and navigation unchanged. This supersedes the historical placeholder and image details in REQ-0005 for these pages.
+
+Acceptance: all specified images load in the requested order, with 16:9 banners and 4:3 galleries at desktop and mobile widths; the listing cards load, links remain usable, and no affected page references removed images. See `VALIDATION_SUMMARY.md` for evidence.
+
+## REQ-0014 Responsive layout (approved 2026-11-02)
+
+Shared header, footer, contact form, enquiry preview, and home captions fit narrow viewports without page-level horizontal overflow or caption clipping. Preserve the existing layout and content while allowing text to wrap. Acceptance is evidenced by the responsive checks in `VALIDATION_SUMMARY.md`.
+
 Cycle: `C1`
 Status of this file: drafted from the repository on 2026-10-27. Nothing here is approved. See `GATES.md` / `GATE-0001`.
 

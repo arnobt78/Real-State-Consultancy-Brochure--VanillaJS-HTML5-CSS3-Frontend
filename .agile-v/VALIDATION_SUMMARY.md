@@ -1,5 +1,17 @@
 # VALIDATION SUMMARY
 
+## 2026-11-02 — responsive layout (`REQ-0014`)
+
+- Local Chrome/Playwright checks covered 15 routes in Bangla and English at 17 viewport widths from 280px to 1920px, after fonts loaded: no document-level horizontal overflow. At 280px the contact form and its message preview also fit, including a long unbroken message.
+- Language persistence, legacy redirects, project back/forward navigation, the mobile menu, form validation and WhatsApp preview passed. The independent verifier checked all five home captions through transitions in both languages at 320, 521, 861, 1024, 1101 and 1440px; no sampled text clipping remained. Local page-error and failed-request checks showed none.
+- `git diff --check` and `node --check public/js/site.js` passed. No repository lint, typecheck, test suite, or build command exists. Production, every browser/device, and a comprehensive security audit were not tested.
+
+## 2026-11-02 — project image refresh (`REQ-0013`)
+
+- Served `public/` locally with `python3 -m http.server 8765 --directory public --bind 127.0.0.1`. A temporary Playwright Core and Chrome check loaded the six detail pages and the projects listing at 1440px and 390px. All main images decoded; gallery counts were 3, 8, 0, 0, 2, and 1 for design, concrete, assessment, interior, solar, and fire respectively. Banners measured 16:9, galleries measured 4:3, six listing links and two actions per detail page were present, and no horizontal overflow was detected. Concrete gallery screenshots were visually inspected at both widths.
+- A Python HTML parser checked root-relative image `src` paths across `public/`: zero missing files. HTTP requests returned 200 for the listing, six detail routes, and the contact route with `service=3`. `git diff --check` passed.
+- The first check using an old Playwright installation failed due to browser-driver incompatibility; the check was rerun successfully with Playwright Core installed under `/tmp`. Individual links were not clicked and production was not tested. No project test, lint, or build script exists.
+
 Cycle: `C1`
 Session: 2026-10-27
 eval_gate_status: not applicable (no release candidate, Gate 2 not open)

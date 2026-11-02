@@ -1,5 +1,11 @@
 # TASKS
 
+## 2026-11-02 — approved project image refresh
+
+- `REQ-0013`: Replaced the four detail-page banners and galleries, added shared 4:3 gallery framing, and updated the two listing cards. Local validation is recorded in `VALIDATION_SUMMARY.md`.
+- `REQ-0014`: Fixed narrow header, footer, contact and caption layout; local verification is recorded in `VALIDATION_SUMMARY.md`.
+- Publication is authorized by the user via feature branch and pull request; verify checks and the merged state before reporting completion.
+
 Cycle: `C1`. No task may start until `GATE-0001` is approved for that task’s requirement IDs.
 
 Recommended order if the full proposed set is approved. Wave 2 waits for Wave 1 because verification has to cover the finished page.

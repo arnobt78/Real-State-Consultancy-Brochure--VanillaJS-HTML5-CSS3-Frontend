@@ -1,5 +1,27 @@
 # STATE
 
+## 2026-11-02 — commit preparation
+
+- Completed `REQ-0013` image refresh and `REQ-0014` responsive changes. Footer, header, contact form and preview fit narrow screens; home captions wrap within a stable frame during fades.
+- Local responsive and workflow checks, independent caption verification, and limitations are recorded in `VALIDATION_SUMMARY.md`. Existing image additions and deletions are intentional for the approved refresh.
+- The user authorized committing, pushing `fix/footer-information`, creating a pull request, and squash merging into `main` if checks and protections permit. Do not delete the branch without separate authorization.
+- Next exact task: finish the authorized GitHub workflow, verify the resulting PR and merge, and check the deployment separately. Earlier implementation and deployment notes below are historical where they conflict.
+
+## 2026-11-02 — project image refresh
+
+- Completed approved `REQ-0013`: refreshed four project detail banners and galleries, applied shared 4:3 gallery styling, and repaired the design and solar listing images. The assessment and interior pages retain their existing banners and have no galleries.
+- Validation: local Chrome checks at desktop and mobile widths, image path and HTTP checks, and `git diff --check` passed; see `VALIDATION_SUMMARY.md` for scope and limitations. Production was not tested.
+- Existing user-provided image additions and deletions were preserved. The work remains on `fix/footer-information`; no push, pull request, merge, or deployment was performed.
+- Remaining: user review. Next exact task: respond to the user's review or further direction; any remote publication is outside this task. The image-specific portions of older notes below are historical.
+
+## 2026-11-02 readiness checkpoint
+
+- The user will provide a new request. Analyze its scope, update relevant planning records, and present a plan for approval before coding.
+- Read `docs/AGILE_V_PROTOCOL.md` (there is no root-level `AGILE_V_PROTOCOL.md`), `CLAUDE.md`, `AGENTS.md`, the Agile V core and pipeline skills, and the existing checkpoint and approval records.
+- Local reconciliation: `public/` contains 15 HTML entry points; `wrangler.toml` serves `./public`. The current branch is `fix/footer-information` and the working tree was clean before this state update. The recorded supersession of `GATE-0001` remains in effect; no new work is approved by this readiness checkpoint.
+- No application code changed and no behavior or deployment was tested in this readiness check. The earlier deployment note below has not been reverified.
+- Next exact task: receive the user's request, inspect its affected code and requirements, identify risks and dependencies, update relevant planning files, and propose a scoped plan. Wait for approval before implementation.
+
 ## Resume point
 
 Cycle: `C1`
