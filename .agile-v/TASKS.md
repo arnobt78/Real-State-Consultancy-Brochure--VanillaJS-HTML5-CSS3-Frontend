@@ -1,5 +1,10 @@
 # TASKS
 
+## 2026-11-03 — approved metadata update
+
+- `REQ-0015`: Updated the 15 page heads, sitemap dates, and host-specific Vercel header. Page bodies, CSS, and JavaScript are unchanged; local validation and independent review passed.
+- The user subsequently authorized the branch/PR/squash-merge workflow. Verify the live header and metadata after deployment. The Cloudflare hostname redirect remains prepared but unapplied.
+
 ## 2026-11-02 — approved project image refresh
 
 - `REQ-0013`: Replaced the four detail-page banners and galleries, added shared 4:3 gallery framing, and updated the two listing cards. Local validation is recorded in `VALIDATION_SUMMARY.md`.

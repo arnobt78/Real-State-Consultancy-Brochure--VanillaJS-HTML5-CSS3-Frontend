@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0015 Search and link-preview metadata (approved 2026-11-03)
+
+Use “Build Safe Engineering and Consultancy” in page metadata and organization structured data on all 15 pages while retaining distinct descriptions and visible copy. Keep `https://buildsafe.com.bd` as the canonical origin, the current share image, and the founder's LinkedIn only on the founder entity. Add a Vercel test-host-only `noindex, follow` response header and correct the project listing and four changed detail-page sitemap dates to 2026-11-02. Prepare, but do not deploy, a path- and query-preserving `www` to apex Cloudflare redirect.
+
+Acceptance: validate all page heads, structured data, sitemap, asset references, crawler-readable HTML, and the Vercel host condition; preserve page bodies and production indexing. Live hosting and external preview checks require separate deployment authorization.
+
 ## REQ-0013 Project image refresh (approved 2026-11-02)
 
 Use the supplied 16:9 banners and ordered 4:3 gallery images on the concrete, fire safety, residential design, and solar detail pages. Use the first residential and solar gallery images on their listing cards. Share 4:3 gallery framing across project detail pages; retain the existing assessment and interior banners. Keep page copy and navigation unchanged. This supersedes the historical placeholder and image details in REQ-0005 for these pages.
