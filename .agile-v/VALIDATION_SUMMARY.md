@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-03 — search and sharing metadata (`REQ-0015`)
+
+- Parsed all 15 page heads: unique titles and descriptions, canonical and Open Graph URLs, Twitter cards, JSON-LD, founder and organization links, and sitemap entries passed. The five project dates match 2026-11-02. Page bodies match `HEAD` and local image paths resolve.
+- Forty-five local crawler-style GETs passed. Independent review checked 458 root-absolute references and the Vercel headers schema subsection and host matcher. Live Vercel edge behavior and social previews remain unverified until deployment.
+- Local Chrome at 390px and 1440px loaded all 15 routes and images; language persistence, project navigation, enquiry validation, and WhatsApp preview passed, with no observed console, page, or local HTTP errors. `git diff --check` and JavaScript syntax checks passed. No repository lint, typecheck, unit-test suite, or build command exists.
+
 ## 2026-11-02 — responsive layout (`REQ-0014`)
 
 - Local Chrome/Playwright checks covered 15 routes in Bangla and English at 17 viewport widths from 280px to 1920px, after fonts loaded: no document-level horizontal overflow. At 280px the contact form and its message preview also fit, including a long unbroken message.

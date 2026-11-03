@@ -1,5 +1,24 @@
 # STATE
 
+## 2026-11-03 — metadata commit preparation
+
+- Implemented and locally verified `REQ-0015`: consistent business naming and organization data across 15 page heads, five corrected sitemap dates, and a test-host-specific Vercel `noindex, follow` header. Page bodies and the production canonical origin are unchanged.
+- Independent verification and local Chrome regression checks passed; see `VALIDATION_SUMMARY.md`. Live Vercel header behavior and social previews require post-deployment verification. The prepared Cloudflare `www` to apex redirect has not been applied.
+- The user authorized a feature-branch commit and push, PR creation, and squash merge after checks. Next exact action: complete that workflow without modifying Cloudflare redirect settings; verify the PR, merge, and deployments. Keep the branch unless separately authorized to delete it.
+
+## 2026-11-03 — approved metadata scope
+
+- The user approved `REQ-0015`: update metadata on 15 pages, sitemap dates, and a test-host-only Vercel indexing header; prepare a Cloudflare hostname redirect without deploying it.
+- Implementation starts on `fix/footer-information` with the existing readiness-state edit preserved. Keep visible page bodies, CSS, and JavaScript unchanged; do not push, deploy, or modify hosting settings.
+- Next exact task: implement `REQ-0015`, validate the local files and crawler responses, and obtain independent verification. Live preview, Vercel header, redirect, and search indexing require separately authorized deployment and external verification.
+
+## 2026-11-03 — awaiting new request
+
+- Loaded the Agile V protocol, project instructions, state, checkpoint, and approval records. `GATE-0001` remains superseded by the later recorded direction; new implementation still requires a scoped plan and approval.
+- Local branch `fix/footer-information` is clean at `1b16759` before this state update. `git ls-remote` reports that commit on the remote feature branch and `58d6a22` on remote `main`; local `main` is behind. The prior session recorded PR 17 as squash-merged at `58d6a22` and the Worker build as successful. The PR API could not be reached in this readiness check; live deployment was not rechecked.
+- The static publish root is `public/`, with 15 HTML entry points; `wrangler.toml` serves that directory. No application files were changed or tested in this readiness check.
+- Remaining: the user has not yet provided the new task. Next exact action: receive it, inspect affected code and requirements, update relevant planning records, identify risks and dependencies, and present a scoped plan. Wait for approval before coding. Do not switch branches or overwrite work during this readiness check.
+
 ## 2026-11-02 — commit preparation
 
 - Completed `REQ-0013` image refresh and `REQ-0014` responsive changes. Footer, header, contact form and preview fit narrow screens; home captions wrap within a stable frame during fades.
