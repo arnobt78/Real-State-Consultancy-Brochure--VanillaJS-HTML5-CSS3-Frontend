@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0017 Hero stacking and shared frame glow (approved 2026-11-03)
+
+Keep the homepage slideshow and captions beneath the sticky header and open mobile menu, including after repeated transitions. Reuse the existing hero glow on the eight home service cards, the home test panel, service-page images, project cards, and existing project-detail banners and gallery images. Preserve layout, navigation, animation, and image framing.
+
+Acceptance: check the affected pages at phone and desktop widths in light and dark themes; verify the glow, image loading, card links, no horizontal overflow, and navigation over the slideshow after repeated transitions. See `VALIDATION_SUMMARY.md`.
+
 ## REQ-0016 Enquiry fallback and image descriptions (approved 2026-11-03)
 
 Keep the enquiry form hidden until its submit handler and service selection are ready. Until then, show a bilingual fallback with direct phone and WhatsApp links. Preserve the existing form workflow and prevent enquiry data from being submitted to the site's URL without JavaScript. Provide accurate Bangla and English alternatives for informative images while keeping decorative images silent.

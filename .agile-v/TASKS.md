@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-03 — hero stacking and frame glow
+
+- `REQ-0017`: Implemented and independently verified the shared glow and hero stacking fix. The user authorized branch push, a pull request, and squash merge if checks and protections allow. Verify remote status and deployment separately.
+
 ## 2026-11-03 — enquiry fallback and image alternatives
 
 - `REQ-0016`: Implemented and independently verified the bilingual form fallback and image alternatives. The user authorized the feature branch, PR, and squash-merge workflow; verify checks and deployments before reporting publication.
