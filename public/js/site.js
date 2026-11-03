@@ -43,6 +43,9 @@
     document.querySelectorAll('[data-bn][data-en]').forEach(function (el) {
       el.setAttribute('placeholder', el.getAttribute('data-' + l));
     });
+    document.querySelectorAll('img[data-alt-bn][data-alt-en]').forEach(function (img) {
+      img.alt = img.getAttribute('data-alt-' + l);
+    });
     var svcBn = document.getElementById('f-svc'), svcEn = document.getElementById('f-svc-en');
     if (svcBn && svcEn) { if (l === 'en') svcEn.value = svcBn.value; else svcBn.value = svcEn.value; }
     try { localStorage.setItem('bs-lang', l); } catch (e) {}
@@ -206,5 +209,7 @@
   if (form) {
     var svc = new URLSearchParams(location.search).get('service');
     if (svc && /^[0-8]$/.test(svc)) { F('f-svc').value = svc; var svcEn = document.getElementById('f-svc-en'); if (svcEn) svcEn.value = svc; }
+    form.hidden = false;
+    F('enq-fallback').hidden = true;
   }
 })();
