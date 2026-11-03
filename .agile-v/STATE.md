@@ -1,5 +1,11 @@
 # STATE
 
+## 2026-11-03 — enquiry fallback commit preparation
+
+- Completed `REQ-0016`: the contact form stays hidden until JavaScript initializes and a bilingual phone/WhatsApp fallback is shown until then. Informative images have Bangla and English alternatives; decorative images remain silent.
+- Local browser and independent checks passed; see `VALIDATION_SUMMARY.md`. No message was sent and production was not tested in verification.
+- The user authorized commit, branch push, PR, and squash merge after checks. Next exact task: complete and verify that workflow, then verify the live deployment. Do not delete the feature branch without separate authorization.
+
 ## 2026-11-03 — metadata commit preparation
 
 - Implemented and locally verified `REQ-0015`: consistent business naming and organization data across 15 page heads, five corrected sitemap dates, and a test-host-specific Vercel `noindex, follow` header. Page bodies and the production canonical origin are unchanged.

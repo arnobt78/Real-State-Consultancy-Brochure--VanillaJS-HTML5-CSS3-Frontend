@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-03 — enquiry fallback and image alternatives (`REQ-0016`)
+
+- Local Chrome checks at phone and desktop widths passed with JavaScript disabled, delayed, blocked, and working. The fallback remains visible until the submit handler is ready; phone and WhatsApp links remain available. Bilingual messaging, light/dark error styling, and no horizontal overflow were checked.
+- Across all 15 routes, 35 informative image instances switched between Bangla and English alternatives. All nine service selections in both languages, invalid fields, Bangla digits, message preview, copy and edit passed. Independent verification confirmed the fallback, language persistence, safe preview and no sample enquiry values in browser network requests.
+- `git diff --check` and `node --check public/js/site.js` passed. No WhatsApp message was sent, and production was not tested. The repository has no lint, typecheck, unit-test suite, or build command.
+
 ## 2026-11-03 — search and sharing metadata (`REQ-0015`)
 
 - Parsed all 15 page heads: unique titles and descriptions, canonical and Open Graph URLs, Twitter cards, JSON-LD, founder and organization links, and sitemap entries passed. The five project dates match 2026-11-02. Page bodies match `HEAD` and local image paths resolve.

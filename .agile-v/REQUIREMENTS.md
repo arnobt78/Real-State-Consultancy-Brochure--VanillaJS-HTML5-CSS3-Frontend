@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0016 Enquiry fallback and image descriptions (approved 2026-11-03)
+
+Keep the enquiry form hidden until its submit handler and service selection are ready. Until then, show a bilingual fallback with direct phone and WhatsApp links. Preserve the existing form workflow and prevent enquiry data from being submitted to the site's URL without JavaScript. Provide accurate Bangla and English alternatives for informative images while keeping decorative images silent.
+
+Acceptance: test disabled, delayed, blocked, and working JavaScript; verify the fallback, both languages, all service values, form validation, preview, copy, and edit, and image alternatives across the site. See `VALIDATION_SUMMARY.md` for evidence and limits.
+
 ## REQ-0015 Search and link-preview metadata (approved 2026-11-03)
 
 Use “Build Safe Engineering and Consultancy” in page metadata and organization structured data on all 15 pages while retaining distinct descriptions and visible copy. Keep `https://buildsafe.com.bd` as the canonical origin, the current share image, and the founder's LinkedIn only on the founder entity. Add a Vercel test-host-only `noindex, follow` response header and correct the project listing and four changed detail-page sitemap dates to 2026-11-02. Prepare, but do not deploy, a path- and query-preserving `www` to apex Cloudflare redirect.

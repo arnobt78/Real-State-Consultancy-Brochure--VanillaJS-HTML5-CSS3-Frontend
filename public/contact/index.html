@@ -216,7 +216,12 @@
         <section style="padding-top: 40px">
           <div class="wrap contact-grid">
             <div>
-              <form class="enq" id="enq" novalidate>
+              <div class="info-card f" id="enq-fallback">
+                <p class="err"><span lang="bn">ফর্মটি দেখা না গেলে, ফোন করুন অথবা হোয়াটসঅ্যাপে যোগাযোগ করুন।</span><span lang="en">If the form does not appear, call us or contact us on WhatsApp.</span></p>
+                <p><a href="tel:+8801814116677"><span lang="bn">ফোন করুন</span><span lang="en">Call us</span>: +880 1814-116677</a></p>
+                <p><a href="https://wa.me/8801814116677"><span lang="bn">হোয়াটসঅ্যাপে যোগাযোগ করুন</span><span lang="en">Contact us on WhatsApp</span></a></p>
+              </div>
+              <form class="enq" id="enq" novalidate hidden>
                 <div class="f">
                   <label for="f-name"
                     ><span lang="bn">আপনার নাম</span

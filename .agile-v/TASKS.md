@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-03 — enquiry fallback and image alternatives
+
+- `REQ-0016`: Implemented and independently verified the bilingual form fallback and image alternatives. The user authorized the feature branch, PR, and squash-merge workflow; verify checks and deployments before reporting publication.
+
 ## 2026-11-03 — approved metadata update
 
 - `REQ-0015`: Updated the 15 page heads, sitemap dates, and host-specific Vercel header. Page bodies, CSS, and JavaScript are unchanged; local validation and independent review passed.

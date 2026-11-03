@@ -54,6 +54,8 @@ The only persisted client value is `bs-lang`.
 
 Enquiry fields are not stored. After a valid submit they are shown in the page and passed to WhatsApp.
 
+The contact form stays hidden until its submit handler is ready; a bilingual phone and WhatsApp fallback appears when JavaScript is unavailable. Informative image alternatives follow the selected language.
+
 Do not add a second copy of the service list, phone number, or language strings.
 
 ---
