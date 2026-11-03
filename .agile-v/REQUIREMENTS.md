@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0017 Hero stacking and shared frame glow (approved 2026-11-03)
+
+Keep the homepage slideshow and captions beneath the sticky header and open mobile menu, including after repeated transitions. Reuse the existing hero glow on the eight home service cards, the home test panel, service-page images, project cards, and existing project-detail banners and gallery images. Preserve layout, navigation, animation, and image framing.
+
+Acceptance: check the affected pages at phone and desktop widths in light and dark themes; verify the glow, image loading, card links, no horizontal overflow, and navigation over the slideshow after repeated transitions. See `VALIDATION_SUMMARY.md`.
+
 ## REQ-0016 Enquiry fallback and image descriptions (approved 2026-11-03)
 
 Keep the enquiry form hidden until its submit handler and service selection are ready. Until then, show a bilingual fallback with direct phone and WhatsApp links. Preserve the existing form workflow and prevent enquiry data from being submitted to the site's URL without JavaScript. Provide accurate Bangla and English alternatives for informative images while keeping decorative images silent.
@@ -23,7 +29,7 @@ Acceptance: all specified images load in the requested order, with 16:9 banners 
 Shared header, footer, contact form, enquiry preview, and home captions fit narrow viewports without page-level horizontal overflow or caption clipping. Preserve the existing layout and content while allowing text to wrap. Acceptance is evidenced by the responsive checks in `VALIDATION_SUMMARY.md`.
 
 Cycle: `C1`
-Status of this file: drafted from the repository on 2026-10-27. Nothing here is approved. See `GATES.md` / `GATE-0001`.
+The older requirements below were drafted on 2026-10-27. The approved requirements are listed above; `GATE-0001` was superseded.
 
 Parent product intent, inferred from the page copy and not from a separate brief: a public brochure that explains Build Safe’s services in Bangla and English and lets a visitor start an enquiry on WhatsApp.
 

@@ -1,5 +1,10 @@
 # STATE
 
+## 2026-11-03 — hero stacking and frame glow commit preparation
+
+- Completed `REQ-0017`: isolated the home hero's stacking context and reused its shadow on the requested home, service, and project elements. Local browser and independent verification passed; see `VALIDATION_SUMMARY.md`.
+- The user authorized commit, branch push, PR creation, and squash merge subject to checks and protections. Next exact task: complete and verify that workflow; production and cross-browser behavior remain unverified. Preserve branches unless their deletion is separately authorized.
+
 ## 2026-11-03 — enquiry fallback commit preparation
 
 - Completed `REQ-0016`: the contact form stays hidden until JavaScript initializes and a bilingual phone/WhatsApp fallback is shown until then. Informative images have Bangla and English alternatives; decorative images remain silent.

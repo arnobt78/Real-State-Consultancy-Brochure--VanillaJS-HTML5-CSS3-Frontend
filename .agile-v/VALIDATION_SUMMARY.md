@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-03 — hero stacking and shared frame glow (`REQ-0017`)
+
+- Local Chrome checks covered all nine affected routes at 320, 390, 768, and 1440px in light and dark themes: requested shadows, image loading, card navigation, and document overflow passed. The independent verifier checked 352 affected instances and clicked menu and card links.
+- The hero and open mobile menu were checked after 23 actual slideshow transitions, reaching image layer 24; navigation remained clickable. Both languages and reduced motion were included in the hero checks. All 15 routes loaded at 390 and 1440px, with navigation and back/forward checks passing.
+- `git diff --check` and `node --check public/js/site.js` passed. A parallel local-server run had connection resets; sequential reruns passed. Production, other browsers, and performance were not tested. No repository lint, typecheck, unit-test suite, or build command exists.
+
 ## 2026-11-03 — enquiry fallback and image alternatives (`REQ-0016`)
 
 - Local Chrome checks at phone and desktop widths passed with JavaScript disabled, delayed, blocked, and working. The fallback remains visible until the submit handler is ready; phone and WhatsApp links remain available. Bilingual messaging, light/dark error styling, and no horizontal overflow were checked.
