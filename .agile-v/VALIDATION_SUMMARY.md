@@ -4,6 +4,7 @@
 
 - Local Chrome checks covered all five captions in both languages at widths from 280 to 1440px; lines remained visible, text fit and no document overflow was detected. Independent checks covered 320, 390, 768 and 1440px in both languages.
 - Mouse hover froze and resumed a crossfade; touch hold and release on the image and caption, touch cancellation, simulated visibility changes, remaining display time and reduced motion passed independent checks. All 15 routes loaded at 390 and 1440px; navigation, back, local HTTP and page-error checks passed.
+- A separate local Chrome check confirmed that the caption width transition and image fade both freeze during hover and resume afterward.
 - `git diff --check` and `node --check public/js/site.js` passed. Production, other browsers, physical devices and performance were not tested. The repository has no lint, typecheck, unit-test suite or build command.
 
 ## 2026-11-03 — hero stacking and shared frame glow (`REQ-0017`)
