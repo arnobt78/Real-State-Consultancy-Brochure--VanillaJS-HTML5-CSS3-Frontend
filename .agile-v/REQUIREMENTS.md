@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0019 Home caption alignment and wrapping (approved 2026-11-05)
+
+Center the home captions vertically between their side lines, keep each visible caption fully readable during fades, and wrap only when the available width requires it. Adjust the lines smoothly while preserving slideshow timing, pause behavior, reduced motion, navigation and copy.
+
+Acceptance: inspect caption bounds and alignment throughout fades in both languages at phone and desktop widths, including disabled JavaScript, input holds and failed images. See `VALIDATION_SUMMARY.md`.
+
 ## REQ-0018 Home caption lines and slideshow holds (approved 2026-11-05)
 
 Display responsive animated lines on either side of each home slideshow caption. Pause the current image, caption and line transition when hovering or holding the image or caption; resume from the same point on leave, release or cancellation. Preserve timing, tab visibility handling, reduced motion, and navigation stacking.

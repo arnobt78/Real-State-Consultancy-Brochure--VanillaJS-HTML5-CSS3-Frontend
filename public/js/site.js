@@ -17,18 +17,31 @@
     if (legacy[hash]) { location.replace(legacy[hash]); return; }
   }
 
+  var preparedCaption = null;
   /* The caption cell is only as wide as the line on screen, so the side rules follow it. */
   function fitCaption() {
     var box = document.querySelector('.cap-lines');
     if (!box) return;
-    var line = box.querySelector('.cap-line.is-on:not(.is-leaving)') || box.querySelector('.cap-line.is-on');
-    if (!line) return;
-    var measure = line.cloneNode(true);
-    measure.style.cssText = 'position:fixed;visibility:hidden;width:max-content;max-width:none;pointer-events:none';
-    box.parentNode.appendChild(measure);
-    var w = Math.min(measure.getBoundingClientRect().width, Math.max(0, box.parentNode.clientWidth - 36));
-    measure.remove();
+    var limit = Math.max(0, box.parentNode.clientWidth - 36);
+    var w = 0;
+    var height = 0;
+    var visible = 0;
+    box.querySelectorAll('.cap-line').forEach(function (line) {
+      var measure = line.cloneNode(true);
+      measure.style.cssText = 'position:fixed;visibility:hidden;width:max-content;max-width:none;pointer-events:none;transform:none';
+      box.parentNode.appendChild(measure);
+      var lineWidth = Math.min(Math.ceil(measure.getBoundingClientRect().width) + 1, limit);
+      measure.style.width = lineWidth + 'px';
+      height = Math.max(height, measure.getBoundingClientRect().height);
+      measure.remove();
+      line.style.width = lineWidth + 'px';
+      line.style.maxWidth = limit + 'px';
+      if (line.classList.contains('is-on')) { w = Math.max(w, lineWidth); visible += 1; }
+      else if (line === preparedCaption) w = Math.max(w, lineWidth);
+    });
     if (!w) return;
+    box.style.minWidth = visible > 1 ? w + 'px' : '0px';
+    box.style.minHeight = Math.max(height, parseFloat(getComputedStyle(box).fontSize) * 3.6) + 'px';
     var current = box.getBoundingClientRect().width;
     if (!box.style.width && current && Math.abs(current - w) > 1) {
       box.style.width = current + 'px';
@@ -197,6 +210,13 @@
       fadeDue = performance.now() + ms;
       fadeWait = setTimeout(function () { fadeWait = 0; finishFade(); }, ms);
     }
+    function scheduleNext() {
+      after(2300, function () {
+        preparedCaption = caps[(frame + 1) % frames.length] || null;
+        fitCaption();
+        after(700, function () { go((frame + 1) % frames.length, 0); });
+      });
+    }
     function begin(n) {
       var next = frames[n];
       var prev = frames[frame];
@@ -208,7 +228,8 @@
       next.style.zIndex = String(layer);
       next.classList.add('is-on');
       if (nextLine) nextLine.classList.add('is-on');
-      if (prev === next) { fading = false; fitCaption(); after(3000, function () { go((frame + 1) % frames.length, 0); }); return; }
+      preparedCaption = null;
+      if (prev === next) { fading = false; fitCaption(); scheduleNext(); return; }
       prev.classList.add('is-leaving');
       if (prevLine && prevLine !== nextLine) prevLine.classList.add('is-leaving');
       fitCaption();
@@ -225,7 +246,8 @@
         prev.removeEventListener('transitionend', finish);
         retire(prev, next);
         fading = false;
-        after(3000, function () { go((frame + 1) % frames.length, 0); });
+        fitCaption();
+        scheduleNext();
       }
       finishFade = finish;
       prev.addEventListener('transitionend', finish);
@@ -233,7 +255,15 @@
     }
     function go(n, skipped) {
       var next = frames[n];
-      whenReady(next, function () { begin(n); }, function () {
+      whenReady(next, function () {
+        if (caps[n] && preparedCaption !== caps[n]) {
+          preparedCaption = caps[n];
+          fitCaption();
+          after(700, function () { begin(n); });
+          return;
+        }
+        begin(n);
+      }, function () {
         if (skipped + 1 >= frames.length) return;
         go((n + 1) % frames.length, skipped + 1);
       });
@@ -256,7 +286,7 @@
     document.addEventListener('visibilitychange', function () { unseen = document.hidden; run(); });
     frames[0].style.zIndex = '1';
     whenReady(frames[1 % frames.length], function () {}, function () {});
-    after(3000, function () { go(1 % frames.length, 0); });
+    scheduleNext();
   }
 
   setLang(lang === 'en' ? 'en' : 'bn');
