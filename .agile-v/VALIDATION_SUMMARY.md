@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-05 — home caption alignment (`REQ-0019`)
+
+- Local Chrome and independent checks sampled caption bounds and side-line alignment through crossfades in Bangla and English at widths from 280 to 1440px. No text clipping or horizontal overflow was observed; representative phone and desktop screenshots were inspected.
+- A detected jump in side-line expansion was fixed; frame-by-frame checks confirmed smooth sampled expansion and shrink. Mouse hover and touch holds, reduced motion, disabled JavaScript and skipping failed slideshow images passed local checks. All 15 routes loaded at 390 and 1440px with navigation and local runtime checks passing on rerun.
+- One concurrent local route run returned transient 404s for concrete images; the files existed and subsequent checks returned 200. The cause was not determined. `git diff --check` and `node --check public/js/site.js` passed. Production, other browsers, physical devices and performance were not tested.
+
 ## 2026-11-05 — home caption lines and holds (`REQ-0018`)
 
 - Local Chrome checks covered all five captions in both languages at widths from 280 to 1440px; lines remained visible, text fit and no document overflow was detected. Independent checks covered 320, 390, 768 and 1440px in both languages.

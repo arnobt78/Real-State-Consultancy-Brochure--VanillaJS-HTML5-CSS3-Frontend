@@ -175,11 +175,11 @@ section { padding-block: 72px }
 .dim { display: flex; align-items: center; gap: 14px; margin-top: 14px; color: var(--ink); text-align: center }
 .dim.cap { display: flex; gap: 6px; font-size: clamp(10.5px, 2.85vw, 13.5px); font-weight: 500; color: var(--ink-2); line-height: 1.5; white-space: normal }
 .dim.cap::before, .dim.cap::after { min-width: 12px }
-.cap-lines { position: relative; display: grid; width: max-content; max-width: calc(100% - 36px); min-width: 0; min-height: 3.6em; justify-items: center; transition: width .7s cubic-bezier(0.4, 0, 0.2, 1) }
-.cap-line { grid-area: 1 / 1; opacity: 0; transition: opacity .7s cubic-bezier(0.4, 0, 0.2, 1) }
-.cap-line.is-on { position: relative; width: 100%; opacity: 1 }
+.cap-lines { position: relative; display: grid; width: max-content; max-width: calc(100% - 36px); min-width: 0; min-height: 3.6em; place-items: center; transition: width .7s cubic-bezier(0.4, 0, 0.2, 1) }
+.cap-line { grid-area: 1 / 1; width: 100%; max-width: 100%; opacity: 0; transition: opacity .7s cubic-bezier(0.4, 0, 0.2, 1) }
+.cap-line.is-on { position: relative; opacity: 1 }
 .cap-line:not(.is-on),
-.cap-line.is-on.is-leaving { position: absolute; width: 100%; opacity: 0 }
+.cap-line.is-on.is-leaving { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0 }
 @media (prefers-reduced-motion: reduce) {
   .hero-slides img, .cap-line, .cap-lines { transition: none }
 }
