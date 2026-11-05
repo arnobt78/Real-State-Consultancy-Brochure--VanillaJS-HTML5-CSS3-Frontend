@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-05 — About video and vision
+
+- `REQ-0022`: See `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized branch push, PR and squash merge subject to checks. Verify remote status and deployment separately.
+
 ## 2026-11-05 — hero, company links and page copy
 
 - `REQ-0020` and `REQ-0021`: See `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized branch push, PR and squash merge subject to checks. Verify remote status and deployment separately.

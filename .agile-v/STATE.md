@@ -1,5 +1,9 @@
 # STATE
 
+## 2026-11-05 — About video and vision commit preparation
+
+- `REQ-0022`: see `TASKS.md` and `VALIDATION_SUMMARY.md`. Next exact task: complete and verify the authorized PR workflow, then verify deployment separately. Preserve the feature branch unless deletion is separately authorized.
+
 ## 2026-11-05 — hero, company links and page copy commit preparation
 
 - `REQ-0020` and `REQ-0021`: see `TASKS.md` and `VALIDATION_SUMMARY.md`. Next exact task: complete and verify the authorized PR workflow, then verify deployment separately. Preserve the feature branch unless deletion is separately authorized.

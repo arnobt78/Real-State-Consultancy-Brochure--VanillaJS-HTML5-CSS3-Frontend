@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-05 — About video and vision (`REQ-0022`)
+
+- Local Chrome and independent checks covered About and Home at 280, 320, 390, 768 and 1440px in Bangla and English, light and dark themes. Video framing, fallback, content, card icons and glow, social links, navigation, home slideshow and horizontal overflow passed.
+- The embedded YouTube video played in local Chrome with playback time advancing; an earlier headless attempt timed out. All 15 routes loaded at 390 and 1440px with local HTTP and navigation checks passing. `git diff --check` and `node --check public/js/site.js` passed.
+- Production, other browsers, physical devices and performance were not tested. The static site has no lint, typecheck, unit-test suite or build command.
+
 ## 2026-11-05 — hero, company links and page copy (`REQ-0020`, `REQ-0021`)
 
 - Local Chrome and independent checks covered all 15 routes at 320, 390, 768 and 1440px in Bangla and English. The changed FAQ answers matched their structured data, the solar badge and navigation worked, and no visible stray `>` characters or horizontal overflow were found.
