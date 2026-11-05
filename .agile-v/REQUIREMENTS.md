@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0022 About video, vision and home accent (approved 2026-11-05)
+
+Show the supplied YouTube video above the bilingual About heading with a direct fallback link. Keep the player at least 200 by 200 pixels where displayed, using the direct link on narrower viewports, and update the existing privacy and cookies notices for the embedded video. Present the approved vision and mission in separate accented blocks, add decorative icons and the shared glow to the four existing cards, and link the roadmap introduction to the company's social channels. Replace the home materials-message diamonds with a vertical accent.
+
+Acceptance: check both languages and themes at phone and desktop widths, video playback and fallback, social links, card layout, home slideshow and navigation. See `VALIDATION_SUMMARY.md`.
+
 ## REQ-0020 Hero synchronization and company LinkedIn (approved 2026-11-05)
 
 Synchronize the home image, caption and side-line transitions without early movement or overlapping captions; retain the display interval, input holds and reduced motion. Update the approved bilingual hero message and four captions. Point company-facing LinkedIn links and organization structured data to the supplied company page while retaining the founder's personal profile on the founder record.
