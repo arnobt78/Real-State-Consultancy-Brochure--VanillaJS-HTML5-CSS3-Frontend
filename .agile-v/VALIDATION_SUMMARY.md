@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-05 — home caption lines and holds (`REQ-0018`)
+
+- Local Chrome checks covered all five captions in both languages at widths from 280 to 1440px; lines remained visible, text fit and no document overflow was detected. Independent checks covered 320, 390, 768 and 1440px in both languages.
+- Mouse hover froze and resumed a crossfade; touch hold and release on the image and caption, touch cancellation, simulated visibility changes, remaining display time and reduced motion passed independent checks. All 15 routes loaded at 390 and 1440px; navigation, back, local HTTP and page-error checks passed.
+- `git diff --check` and `node --check public/js/site.js` passed. Production, other browsers, physical devices and performance were not tested. The repository has no lint, typecheck, unit-test suite or build command.
+
 ## 2026-11-03 — hero stacking and shared frame glow (`REQ-0017`)
 
 - Local Chrome checks covered all nine affected routes at 320, 390, 768, and 1440px in light and dark themes: requested shadows, image loading, card navigation, and document overflow passed. The independent verifier checked 352 affected instances and clicked menu and card links.

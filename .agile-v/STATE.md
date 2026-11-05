@@ -1,5 +1,17 @@
 # STATE
 
+## 2026-11-05 — home caption interaction commit preparation
+
+- Completed and independently verified `REQ-0018`; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized the feature-branch, PR and squash-merge workflow subject to checks.
+- Next exact task: complete and verify publication through the PR, then verify deployment separately. Production, other browsers and physical devices remain unverified. Preserve the feature branch unless deletion is separately authorized.
+
+## 2026-11-05 — awaiting the next request
+
+- Cycle `C1`; awaiting the user's new request and subsequent scope approval. `GATE-0001` is superseded as recorded in `GATES.md` and `DEC-0005`; its pending checkpoint is historical. No new requirement or implementation is approved by this readiness check.
+- Read `docs/AGILE_V_PROTOCOL.md` (there is no root-level copy), `CLAUDE.md`, `AGENTS.md`, this state, checkpoints and approvals. The latest recorded work covers `REQ-0015` through `REQ-0017`; their validation evidence is in `VALIDATION_SUMMARY.md`.
+- The working tree was clean on `fix/hero-navigation-overlap` at `73e6d4e` before this state update. Remote branch references report that same commit, `main` at `06d71ac`, and `fix/footer-information` at `45a3ff7`. Older branch and deployment instructions below have not been reconciled with remote pull requests or live hosting; do not assume their status. `public/` contains 15 HTML files and `wrangler.toml` serves it.
+- No application files were changed or behavior tested in this check. Deployment and pull request status were not verified. Remaining: receive the request, inspect its affected code and requirements, record a scoped plan with risks and dependencies, and wait for approval before coding. Do not switch branches or perform Git publication as part of this readiness check.
+
 ## 2026-11-03 — hero stacking and frame glow commit preparation
 
 - Completed `REQ-0017`: isolated the home hero's stacking context and reused its shadow on the requested home, service, and project elements. Local browser and independent verification passed; see `VALIDATION_SUMMARY.md`.

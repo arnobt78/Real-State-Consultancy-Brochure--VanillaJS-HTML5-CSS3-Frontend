@@ -23,7 +23,11 @@
     if (!box) return;
     var line = box.querySelector('.cap-line.is-on:not(.is-leaving)') || box.querySelector('.cap-line.is-on');
     if (!line) return;
-    var w = line.scrollWidth;
+    var measure = line.cloneNode(true);
+    measure.style.cssText = 'position:fixed;visibility:hidden;width:max-content;max-width:none;pointer-events:none';
+    box.parentNode.appendChild(measure);
+    var w = Math.min(measure.getBoundingClientRect().width, Math.max(0, box.parentNode.clientWidth - 36));
+    measure.remove();
     if (!w) return;
     var current = box.getBoundingClientRect().width;
     if (!box.style.width && current && Math.abs(current - w) > 1) {
@@ -122,11 +126,19 @@
     var wait = 0;
     var due = 0;
     var step = null;
-    var held = false;
+    var hovered = new Set();
+    var touches = new Set();
     var unseen = document.hidden;
     var pausedAt = 0;
     var fading = false;
+    var fadeWait = 0;
+    var fadeDue = 0;
+    var fadeRemaining = 0;
+    var pausedAnimations = [];
+    var paused = false;
     var layer = 1;
+    var caption = slides.parentNode.querySelector('.cap');
+    function held() { return hovered.size > 0 || touches.size > 0; }
     function whenReady(el, ok, fail) {
       function success() {
         if (el.decode) el.decode().then(ok, ok);
@@ -139,7 +151,26 @@
     }
     function run() {
       clearTimeout(wait);
-      if (held || unseen) { if (!pausedAt) pausedAt = performance.now(); return; }
+      var shouldPause = held() || unseen;
+      if (shouldPause && !paused) {
+        paused = true;
+        pausedAnimations = slides.parentNode.getAnimations({ subtree: true }).filter(function (animation) {
+          if (animation.playState !== 'running') return false;
+          animation.pause();
+          return true;
+        });
+        if (fadeWait) {
+          clearTimeout(fadeWait);
+          fadeWait = 0;
+          fadeRemaining = Math.max(0, fadeDue - performance.now());
+        }
+      } else if (!shouldPause && paused) {
+        paused = false;
+        pausedAnimations.forEach(function (animation) { animation.play(); });
+        pausedAnimations = [];
+        if (fading) scheduleFadeFinish(fadeRemaining);
+      }
+      if (shouldPause) { if (!pausedAt) pausedAt = performance.now(); return; }
       if (pausedAt) { due += performance.now() - pausedAt; pausedAt = 0; }
       if (!step || fading) return;
       wait = setTimeout(function () {
@@ -160,12 +191,18 @@
       var line = caps[Array.prototype.indexOf.call(frames, prev)];
       if (line) { line.classList.remove('is-on'); line.classList.remove('is-leaving'); }
     }
+    var finishFade = null;
+    function scheduleFadeFinish(ms) {
+      fadeRemaining = ms;
+      fadeDue = performance.now() + ms;
+      fadeWait = setTimeout(function () { fadeWait = 0; finishFade(); }, ms);
+    }
     function begin(n) {
       var next = frames[n];
       var prev = frames[frame];
       var nextLine = caps[n];
       var prevLine = caps[frame];
-      if (held || unseen) { after(0, function () { begin(n); }); return; }
+      if (held() || unseen) { after(0, function () { begin(n); }); return; }
       fading = true;
       layer += 1;
       next.style.zIndex = String(layer);
@@ -182,13 +219,17 @@
         if (e && e.target !== prev) return;
         if (e && e.propertyName && e.propertyName !== 'opacity') return;
         settled = true;
+        clearTimeout(fadeWait);
+        fadeWait = 0;
+        fadeRemaining = 0;
         prev.removeEventListener('transitionend', finish);
         retire(prev, next);
         fading = false;
         after(3000, function () { go((frame + 1) % frames.length, 0); });
       }
+      finishFade = finish;
       prev.addEventListener('transitionend', finish);
-      setTimeout(function () { finish({ target: prev, propertyName: 'opacity' }); }, 800);
+      scheduleFadeFinish(800);
     }
     function go(n, skipped) {
       var next = frames[n];
@@ -197,8 +238,21 @@
         go((n + 1) % frames.length, skipped + 1);
       });
     }
-    slides.addEventListener('pointerenter', function () { held = true; run(); });
-    slides.addEventListener('pointerleave', function () { held = false; run(); });
+    [slides, caption].forEach(function (target) {
+      if (!target) return;
+      target.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' || event.pointerType === 'pen') { hovered.add(target); run(); }
+      });
+      target.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' || event.pointerType === 'pen') { hovered.delete(target); run(); }
+      });
+      target.addEventListener('pointerdown', function (event) {
+        if (event.pointerType === 'touch') { touches.add(event.pointerId); run(); }
+      });
+    });
+    function releaseTouch(event) { if (touches.delete(event.pointerId)) run(); }
+    window.addEventListener('pointerup', releaseTouch);
+    window.addEventListener('pointercancel', releaseTouch);
     document.addEventListener('visibilitychange', function () { unseen = document.hidden; run(); });
     frames[0].style.zIndex = '1';
     whenReady(frames[1 % frames.length], function () {}, function () {});

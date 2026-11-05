@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0018 Home caption lines and slideshow holds (approved 2026-11-05)
+
+Display responsive animated lines on either side of each home slideshow caption. Pause the current image, caption and line transition when hovering or holding the image or caption; resume from the same point on leave, release or cancellation. Preserve timing, tab visibility handling, reduced motion, and navigation stacking.
+
+Acceptance: verify all captions in both languages across phone and desktop widths, including wrapping and line visibility; test hover and touch during display and fades, release, cancellation, visibility changes, reduced motion and navigation. See `VALIDATION_SUMMARY.md`.
+
 ## REQ-0017 Hero stacking and shared frame glow (approved 2026-11-03)
 
 Keep the homepage slideshow and captions beneath the sticky header and open mobile menu, including after repeated transitions. Reuse the existing hero glow on the eight home service cards, the home test panel, service-page images, project cards, and existing project-detail banners and gallery images. Preserve layout, navigation, animation, and image framing.
