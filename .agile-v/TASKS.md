@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-05 — home caption lines and holds
+
+- `REQ-0018`: See `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized branch push, PR and squash merge subject to checks. Verify remote status and deployment separately.
+
 ## 2026-11-03 — hero stacking and frame glow
 
 - `REQ-0017`: See `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized branch push, a pull request, and squash merge if checks and protections allow. Verify remote status and deployment separately.
