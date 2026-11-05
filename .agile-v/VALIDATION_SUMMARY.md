@@ -4,6 +4,7 @@
 
 - Local Chrome and independent checks covered About and Home at 280, 320, 390, 768 and 1440px in Bangla and English, light and dark themes. Video framing, fallback, content, card icons and glow, social links, navigation, home slideshow and horizontal overflow passed.
 - The embedded YouTube video played in local Chrome with playback time advancing; an earlier headless attempt timed out. All 15 routes loaded at 390 and 1440px with local HTTP and navigation checks passing. `git diff --check` and `node --check public/js/site.js` passed.
+- Following PR review, local and independent checks covered the 200-by-200 minimum player viewport and direct-link fallback on smaller widths, the roadmap's visible focus color, and the bilingual privacy and cookies disclosures. The video remains 16:9 where space permits and is taller on narrow phones; it played at 320px in local Chrome. Existing page layouts overflow at widths below 280px.
 - Production, other browsers, physical devices and performance were not tested. The static site has no lint, typecheck, unit-test suite or build command.
 
 ## 2026-11-05 — hero, company links and page copy (`REQ-0020`, `REQ-0021`)

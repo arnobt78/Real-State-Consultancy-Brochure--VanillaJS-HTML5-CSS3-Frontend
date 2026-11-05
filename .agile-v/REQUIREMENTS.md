@@ -2,7 +2,7 @@
 
 ## REQ-0022 About video, vision and home accent (approved 2026-11-05)
 
-Show the supplied YouTube video above the bilingual About heading with a direct fallback link. Present the approved vision and mission in separate accented blocks, add decorative icons and the shared glow to the four existing cards, and link the roadmap introduction to the company's social channels. Replace the home materials-message diamonds with a vertical accent.
+Show the supplied YouTube video above the bilingual About heading with a direct fallback link. Keep the player at least 200 by 200 pixels where displayed, using the direct link on narrower viewports, and update the existing privacy and cookies notices for the embedded video. Present the approved vision and mission in separate accented blocks, add decorative icons and the shared glow to the four existing cards, and link the roadmap introduction to the company's social channels. Replace the home materials-message diamonds with a vertical accent.
 
 Acceptance: check both languages and themes at phone and desktop widths, video playback and fallback, social links, card layout, home slideshow and navigation. See `VALIDATION_SUMMARY.md`.
 
