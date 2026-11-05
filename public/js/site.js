@@ -17,41 +17,6 @@
     if (legacy[hash]) { location.replace(legacy[hash]); return; }
   }
 
-  var preparedCaption = null;
-  /* The caption cell is only as wide as the line on screen, so the side rules follow it. */
-  function fitCaption() {
-    var box = document.querySelector('.cap-lines');
-    if (!box) return;
-    var limit = Math.max(0, box.parentNode.clientWidth - 36);
-    var w = 0;
-    var height = 0;
-    var visible = 0;
-    box.querySelectorAll('.cap-line').forEach(function (line) {
-      var measure = line.cloneNode(true);
-      measure.style.cssText = 'position:fixed;visibility:hidden;width:max-content;max-width:none;pointer-events:none;transform:none';
-      box.parentNode.appendChild(measure);
-      var lineWidth = Math.min(Math.ceil(measure.getBoundingClientRect().width) + 1, limit);
-      measure.style.width = lineWidth + 'px';
-      height = Math.max(height, measure.getBoundingClientRect().height);
-      measure.remove();
-      line.style.width = lineWidth + 'px';
-      line.style.maxWidth = limit + 'px';
-      if (line.classList.contains('is-on')) { w = Math.max(w, lineWidth); visible += 1; }
-      else if (line === preparedCaption) w = Math.max(w, lineWidth);
-    });
-    if (!w) return;
-    box.style.minWidth = visible > 1 ? w + 'px' : '0px';
-    box.style.minHeight = Math.max(height, parseFloat(getComputedStyle(box).fontSize) * 3.6) + 'px';
-    var current = box.getBoundingClientRect().width;
-    if (!box.style.width && current && Math.abs(current - w) > 1) {
-      box.style.width = current + 'px';
-      void box.offsetWidth;
-    }
-    box.style.width = w + 'px';
-  }
-  window.addEventListener('resize', fitCaption);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitCaption);
-
   /* Shows one language. Placeholders and option labels follow the same choice. */
   function setLang(l) {
     lang = l; root.setAttribute('data-lang', l); root.setAttribute('lang', l);
@@ -66,7 +31,6 @@
     var svcBn = document.getElementById('f-svc'), svcEn = document.getElementById('f-svc-en');
     if (svcBn && svcEn) { if (l === 'en') svcEn.value = svcBn.value; else svcBn.value = svcEn.value; }
     try { localStorage.setItem('bs-lang', l); } catch (e) {}
-    fitCaption();
   }
   document.getElementById('lang-bn').addEventListener('click', function () { setLang('bn'); });
   document.getElementById('lang-en').addEventListener('click', function () { setLang('en'); });
@@ -210,13 +174,7 @@
       fadeDue = performance.now() + ms;
       fadeWait = setTimeout(function () { fadeWait = 0; finishFade(); }, ms);
     }
-    function scheduleNext() {
-      after(2300, function () {
-        preparedCaption = caps[(frame + 1) % frames.length] || null;
-        fitCaption();
-        after(700, function () { go((frame + 1) % frames.length, 0); });
-      });
-    }
+    function scheduleNext() { after(3000, function () { go((frame + 1) % frames.length, 0); }); }
     function begin(n) {
       var next = frames[n];
       var prev = frames[frame];
@@ -228,11 +186,10 @@
       next.style.zIndex = String(layer);
       next.classList.add('is-on');
       if (nextLine) nextLine.classList.add('is-on');
-      preparedCaption = null;
-      if (prev === next) { fading = false; fitCaption(); scheduleNext(); return; }
+      if (prev === next) { fading = false; scheduleNext(); return; }
+      if (nextLine) nextLine.classList.add('is-entering');
       prev.classList.add('is-leaving');
       if (prevLine && prevLine !== nextLine) prevLine.classList.add('is-leaving');
-      fitCaption();
       frame = n;
       var settled = false;
       function finish(e) {
@@ -245,8 +202,8 @@
         fadeRemaining = 0;
         prev.removeEventListener('transitionend', finish);
         retire(prev, next);
+        if (nextLine) nextLine.classList.remove('is-entering');
         fading = false;
-        fitCaption();
         scheduleNext();
       }
       finishFade = finish;
@@ -255,15 +212,7 @@
     }
     function go(n, skipped) {
       var next = frames[n];
-      whenReady(next, function () {
-        if (caps[n] && preparedCaption !== caps[n]) {
-          preparedCaption = caps[n];
-          fitCaption();
-          after(700, function () { begin(n); });
-          return;
-        }
-        begin(n);
-      }, function () {
+      whenReady(next, function () { begin(n); }, function () {
         if (skipped + 1 >= frames.length) return;
         go((n + 1) % frames.length, skipped + 1);
       });

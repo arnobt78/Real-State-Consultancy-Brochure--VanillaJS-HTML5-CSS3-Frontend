@@ -1,5 +1,10 @@
 # STATE
 
+## 2026-11-05 — hero, company links and page copy commit preparation
+
+- Completed and independently verified `REQ-0020` and `REQ-0021`; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized the feature-branch, PR and squash-merge workflow subject to checks.
+- Next exact task: complete and verify publication through the PR; verify deployment separately. Production, other browsers, physical devices and authenticated LinkedIn access remain unverified. Preserve the feature branch unless deletion is separately authorized.
+
 ## 2026-11-05 — home caption alignment commit preparation
 
 - Completed and independently verified `REQ-0019`; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized the feature-branch, PR and squash-merge workflow subject to checks.

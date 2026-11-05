@@ -1,5 +1,17 @@
 # REQUIREMENTS
 
+## REQ-0020 Hero synchronization and company LinkedIn (approved 2026-11-05)
+
+Synchronize the home image, caption and side-line transitions without early movement or overlapping captions; retain the display interval, input holds and reduced motion. Update the approved bilingual hero message and four captions. Point company-facing LinkedIn links and organization structured data to the supplied company page while retaining the founder's personal profile on the founder record.
+
+Acceptance: test all caption transitions, both languages, responsive layout, input holds and no-JavaScript behavior; verify company links and structured-data identities across all 15 pages. See `VALIDATION_SUMMARY.md`.
+
+## REQ-0021 FAQ and project copy (approved 2026-11-05)
+
+Update the FAQ heading, subtitle and two answers in the approved languages, keeping the corresponding Bangla FAQ structured data consistent. Update the solar card badge and remove stray rendered `>` characters without changing intentional icons or HTML structure.
+
+Acceptance: compare changed FAQ answers to structured data, check the solar badge and navigation, and scan all rendered pages in both languages at phone and desktop widths. See `VALIDATION_SUMMARY.md`.
+
 ## REQ-0019 Home caption alignment and wrapping (approved 2026-11-05)
 
 Center the home captions vertically between their side lines, keep each visible caption fully readable during fades, and wrap only when the available width requires it. Adjust the lines smoothly while preserving slideshow timing, pause behavior, reduced motion, navigation and copy.
