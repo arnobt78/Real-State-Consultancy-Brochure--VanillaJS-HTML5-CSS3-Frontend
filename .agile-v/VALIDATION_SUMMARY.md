@@ -3,7 +3,7 @@
 ## 2026-11-05 — hero, company links and page copy (`REQ-0020`, `REQ-0021`)
 
 - Local Chrome and independent checks covered all 15 routes at 320, 390, 768 and 1440px in Bangla and English. The changed FAQ answers matched their structured data, the solar badge and navigation worked, and no visible stray `>` characters or horizontal overflow were found.
-- Sampled hero transitions showed no early line movement, blank caption frames or overlapping text; mouse and touch holds, reduced motion and no-JavaScript behavior passed. Company-facing LinkedIn links and organization/founder structured data were checked on all 15 pages.
+- All five hero transitions, including loop wraparound, passed in local Chrome with the three-second display interval retained. Sampled transitions showed no early line movement, blank caption frames or overlapping text; mouse and touch holds, reduced motion and no-JavaScript behavior passed. Across all 15 pages, company links and organization records matched the supplied company URL, and founder records retained the personal profile.
 - An initial concurrent run reported an overflow that did not recur in 20 focused reloads; a shared local-server connection reset also did not recur on an isolated server. `git diff --check` and `node --check public/js/site.js` passed. Production, other browsers, physical devices, performance and authenticated LinkedIn access were not tested.
 
 ## 2026-11-05 — home caption alignment (`REQ-0019`)
