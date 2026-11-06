@@ -40,6 +40,25 @@
     var open = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', open);
   });
 
+  /* Keep the preview as a direct link if scripting or the embedded player is unavailable. */
+  var videoPreview = document.querySelector('.video-preview');
+  var videoFallback = document.querySelector('.video-fallback');
+  if (videoPreview && videoFallback) {
+    videoPreview.addEventListener('click', function (event) {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      var player = document.createElement('iframe');
+      player.title = 'Build Safe introduction video';
+      player.allow = 'autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      player.allowFullscreen = true;
+      player.src = 'https://www.youtube-nocookie.com/embed/9BET2pwd_2E?autoplay=1&rel=0&playsinline=1';
+      videoPreview.replaceWith(player);
+      videoFallback.classList.remove('video-ready');
+      player.focus();
+    });
+    videoFallback.classList.add('video-ready');
+  }
+
   var toastEl = document.getElementById('toast'), toastT;
   function toast(msg) { toastEl.textContent = msg; toastEl.hidden = false; clearTimeout(toastT); toastT = setTimeout(function () { toastEl.hidden = true; }, 2200); }
   function copyText(text, srcEl) {

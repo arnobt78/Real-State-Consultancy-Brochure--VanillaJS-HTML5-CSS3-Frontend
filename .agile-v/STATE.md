@@ -1,5 +1,15 @@
 # STATE
 
+## 2026-11-06 — About video preview commit preparation
+
+- `REQ-0023` is implemented and independently verified; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized feature-branch push, PR and squash merge subject to checks. Next: complete and verify that workflow; verify deployment separately. Preserve the branch.
+
+## 2026-11-06 — awaiting the next request
+
+- Cycle `C1`. The user will provide a new task; no new implementation is approved. Read the project protocol, instructions, state, checkpoints, approvals and requested Agile V skills. The pending `CP-0001` is historical: `GATE-0001` was superseded by `DEC-0005`.
+- The earlier `REQ-0022` commit-preparation note predates its merge. Remote `main` points to `f6f1491` (About video and company vision); the retained local branch `feat/about-video-vision` is clean at `b25a5fc` before this state update. No deployment or behavior was checked in this readiness session.
+- Next: receive the request, inspect the affected source and requirements, update relevant planning records, and present a scoped plan for approval before coding. Preserve existing work.
+
 ## 2026-11-05 — About video and vision commit preparation
 
 - `REQ-0022`: see `TASKS.md` and `VALIDATION_SUMMARY.md`. Next exact task: complete and verify the authorized PR workflow, then verify deployment separately. Preserve the feature branch unless deletion is separately authorized.

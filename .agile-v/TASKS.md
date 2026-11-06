@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-06 — About video preview and link styling
+
+- `REQ-0023`: Implemented and independently verified. The user authorized push, PR and squash merge subject to checks; verify remote merge and deployment separately.
+
 ## 2026-11-05 — About video and vision
 
 - `REQ-0022`: See `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized branch push, PR and squash merge subject to checks. Verify remote status and deployment separately.

@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-06 — About video preview and link styling (`REQ-0023`)
+
+- Local and independent Chrome checks passed for the YouTube thumbnail, keyboard and touch activation, blocked player, disabled JavaScript, languages, themes and fallback at 240–1440px, including resize across the narrow breakpoint. The video played in headless Chrome; YouTube controls its branding and related videos.
+- Footer styles and horizontal fit passed on all 15 routes at 390 and 1440px. Roadmap hover and keyboard focus, contact validation, Bangla digits, service preselection, WhatsApp handoff and edit passed locally. No message was sent. `node --check public/js/site.js` and `git diff --check` passed.
+- One parallel local-server run failed to initialize JavaScript but passed sequentially. Existing layouts overflow below 280px. Production, physical devices, other browsers and comparative performance were not tested. No repository lint, typecheck, automated test suite or build command exists.
+
 ## 2026-11-05 — About video and vision (`REQ-0022`)
 
 - Local Chrome and independent checks covered About and Home at 280, 320, 390, 768 and 1440px in Bangla and English, light and dark themes. Video framing, fallback, content, card icons and glow, social links, navigation, home slideshow and horizontal overflow passed.
