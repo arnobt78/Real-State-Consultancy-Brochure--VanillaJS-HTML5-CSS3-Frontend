@@ -297,6 +297,7 @@ section { padding-block: 72px }
 .fact h3 { font-size: 18px; font-weight: 600 }
 .fact p { color: var(--ink-2); font-size: 15px }
 .band .sec-head a { color: #E39272; text-decoration: none }
+.band .sec-head a::after { content: '↗'; display: inline-block; margin-inline-start: 2px; font-size: .8em }
 .band .sec-head a:hover { color: #fff }
 .band .sec-head a:focus-visible { outline-color: #E39272 }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 1px solid var(--band-line) }
