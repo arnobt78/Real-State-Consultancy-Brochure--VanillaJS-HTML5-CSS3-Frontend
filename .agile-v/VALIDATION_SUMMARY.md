@@ -1,5 +1,12 @@
 # VALIDATION SUMMARY
 
+## 2026-11-07 — responsive frames, touch and copy (`REQ-0024`–`REQ-0026`)
+
+- Local and independent Chrome checks covered all five slideshow images and captions in both languages at phone and desktop widths, including the updated fourth image, timing and touch-emulated holds, cancellation, scrolling and reduced motion. Native long-press behavior on physical phones remains unverified.
+- About and six project frames passed size, centering and contain checks from 320 to 1920px, including short viewports; YouTube playback and narrow-screen fallback passed. About spacing measured 28px with fallback hidden; visible fallback spacing did not overlap or double the gap.
+- All 15 routes passed local HTTP and language-switching checks. Contact validation, Bangla digits, service preselection, WhatsApp handoff and edit passed; no message was sent. `node --check public/js/site.js` and `git diff --check` passed. No published English advice variants remained in the source scan.
+- Existing layout overflow remains at 240px; short landscape viewports may require scrolling. Production, physical devices, other browsers and performance benchmarks were not tested. The repository has no lint, typecheck, automated test suite or build command.
+
 ## 2026-11-06 — About video preview and link styling (`REQ-0023`)
 
 - Local and independent Chrome checks passed for the YouTube thumbnail, keyboard and touch activation, blocked player, disabled JavaScript, languages, themes and fallback at 240–1440px, including resize across the narrow breakpoint. The video played in headless Chrome; YouTube controls its branding and related videos.

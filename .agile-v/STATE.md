@@ -1,5 +1,9 @@
 # STATE
 
+## 2026-11-07 — responsive frames, touch and copy commit preparation
+
+- `REQ-0024`–`REQ-0026` are implemented and independently verified; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized branch push, PR and squash merge subject to checks. Next: complete and verify that workflow; verify deployment separately. Preserve the branch.
+
 ## 2026-11-06 — About video preview commit preparation
 
 - `REQ-0023` is implemented and independently verified; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized feature-branch push, PR and squash merge subject to checks. Next: complete and verify that workflow; verify deployment separately. Preserve the branch.
