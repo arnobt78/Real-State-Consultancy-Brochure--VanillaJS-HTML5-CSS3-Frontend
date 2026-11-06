@@ -1,5 +1,11 @@
 # REQUIREMENTS
 
+## REQ-0023 About video preview and link styling (approved 2026-11-06)
+
+Display the YouTube thumbnail and an accessible play link in the existing About video frame; load the player on activation with `rel=0`, preserving a direct link without JavaScript, on very narrow screens, and after activation. Keep YouTube branding and controls. Remove the roadmap social links' underlines, provide hover and focus states, and make footer current-page links visually consistent while retaining their semantics. Update video privacy disclosures to reflect thumbnail and player loading.
+
+Acceptance: verify playback and failure fallbacks, both languages and themes, touch and keyboard input, social links, and footer behavior across routes. See `VALIDATION_SUMMARY.md`.
+
 ## REQ-0022 About video, vision and home accent (approved 2026-11-05)
 
 Show the supplied YouTube video above the bilingual About heading with a direct fallback link. Keep the player at least 200 by 200 pixels where displayed, using the direct link on narrower viewports, and update the existing privacy and cookies notices for the embedded video. Present the approved vision and mission in separate accented blocks, add decorative icons and the shared glow to the four existing cards, and link the roadmap introduction to the company's social channels. Replace the home materials-message diamonds with a vertical accent.

@@ -279,7 +279,13 @@ section { padding-block: 72px }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start }
 .about-video { width: 100%; aspect-ratio: 16 / 9; min-height: 202px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); box-shadow: var(--frame-glow) }
 .about-video iframe { display: block; width: 100%; height: 100%; border: 0 }
-@media (max-width: 241px) { .about-video { display: none } }
+.video-preview { display: grid; position: relative; width: 100%; height: 100%; place-items: center; background: #111 }
+.video-preview img { position: absolute; width: 100%; height: 100%; object-fit: cover }
+.video-play { position: relative; display: grid; place-items: center; width: 68px; height: 48px; border-radius: 12px; background: #e00; color: #fff; font-size: 26px }
+.video-preview:focus-visible { outline-offset: -4px }
+.video-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0 }
+.video-fallback.video-ready { display: none }
+@media (max-width: 241px) { .about-video { display: none } .video-fallback.video-ready { display: block } }
 .page-head .video-fallback { margin: 10px 0 24px; font-size: 15px }
 .video-fallback a { color: var(--brand-text) }
 .vision-list { display: flex; flex-direction: column; gap: 28px; min-width: 0 }
@@ -290,7 +296,9 @@ section { padding-block: 72px }
 .fact-icon { width: 24px; height: 24px; color: var(--brand-text); fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 4px }
 .fact h3 { font-size: 18px; font-weight: 600 }
 .fact p { color: var(--ink-2); font-size: 15px }
-.band .sec-head a { color: #E39272 }
+.band .sec-head a { color: #E39272; text-decoration: none }
+.band .sec-head a::after { content: '↗'; display: inline-block; margin-inline-start: 2px; font-size: .8em }
+.band .sec-head a:hover { color: #fff }
 .band .sec-head a:focus-visible { outline-color: #E39272 }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 1px solid var(--band-line) }
 .steps li { display: flex; gap: 14px; padding: 18px 18px 18px 0; border-bottom: 1px solid var(--band-line); align-items: baseline }
@@ -364,7 +372,6 @@ footer .wrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 
 footer h4 { color: var(--band-ink); font: 600 16px var(--f-body); margin: 0 0 10px }
 footer a { text-decoration: none; color: var(--band-ink-2) }
 footer a:hover { color: var(--band-ink) }
-footer a[aria-current="page"] { color: var(--band-ink); font-weight: 600 }
 footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px }
 footer .office { color: inherit; font-weight: inherit; font-size: inherit; line-height: inherit }
 footer .reach { display: flex; align-items: flex-start; gap: 8px }
