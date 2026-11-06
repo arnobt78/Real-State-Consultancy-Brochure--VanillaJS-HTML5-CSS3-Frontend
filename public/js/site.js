@@ -115,6 +115,22 @@
 
   /* Home photo frame. The settled picture stays, then both pictures ease together. */
   var slides = document.querySelector('.hero-slides');
+  if (slides) {
+    var touchTargets = [slides, slides.parentNode.querySelector('.cap')];
+    var activeTouches = new Set();
+    touchTargets.forEach(function (target) {
+      if (!target) return;
+      target.addEventListener('pointerdown', function (event) {
+        if (event.pointerType === 'touch') activeTouches.add(event.pointerId);
+      });
+      target.addEventListener('contextmenu', function (event) {
+        if (event.pointerType === 'touch' || activeTouches.size) event.preventDefault();
+      });
+    });
+    function clearActiveTouch(event) { activeTouches.delete(event.pointerId); }
+    window.addEventListener('pointerup', clearActiveTouch);
+    window.addEventListener('pointercancel', clearActiveTouch);
+  }
   if (slides && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var frames = slides.querySelectorAll('img');
     var caps = slides.parentNode.querySelectorAll('.cap-line');

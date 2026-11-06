@@ -1,5 +1,17 @@
 # REQUIREMENTS
 
+## REQ-0024 Responsive About and project media frames (approved 2026-11-07)
+
+Share centered, uncropped sizing for the About video and six project banners: full-width with a 202px minimum through 860px, and a viewport-height-based 16:9 limit above that breakpoint. Preserve YouTube's minimum player size and narrow fallback.
+
+## REQ-0025 Home slideshow touch holds (approved 2026-11-07)
+
+Pause the current slide and caption while touching the image or caption, resume on release or cancellation, and suppress touch selection and long-press actions on those areas while preserving scrolling, desktop input and reduced motion.
+
+## REQ-0026 Home copy and About spacing (approved 2026-11-07)
+
+Use the supplied fourth hero image and approved bilingual caption, remove final Bengali and English full stops from all five captions, use consultation-related English terminology in published text and alternatives, and update the hero business label. Match the About video-to-heading gap to project banners, retain a usable fallback and use established section spacing. See `VALIDATION_SUMMARY.md` for acceptance evidence.
+
 ## REQ-0023 About video preview and link styling (approved 2026-11-06)
 
 Display the YouTube thumbnail and an accessible play link in the existing About video frame; load the player on activation with `rel=0`, preserving a direct link without JavaScript, on very narrow screens, and after activation. Keep YouTube branding and controls. Remove the roadmap social links' underlines, provide hover and focus states, and make footer current-page links visually consistent while retaining their semantics. Update video privacy disclosures to reflect thumbnail and player loading.

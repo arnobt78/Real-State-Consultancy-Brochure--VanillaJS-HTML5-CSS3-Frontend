@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-07 — responsive frames, touch and copy
+
+- `REQ-0024`–`REQ-0026`: implemented and independently verified. The user authorized the feature-branch push, PR and squash merge subject to checks; verify remote merge and deployment separately.
+
 ## 2026-11-06 — About video preview and link styling
 
 - `REQ-0023`: Implemented and independently verified. The user authorized push, PR and squash merge subject to checks; verify remote merge and deployment separately.

@@ -164,6 +164,10 @@ section { padding-block: 72px }
 .hero-slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; border: 0; border-radius: 0; opacity: 0; z-index: 0; transition: opacity .7s cubic-bezier(0.4, 0, 0.2, 1) }
 .hero-slides img.is-on { opacity: 1 }
 .hero-slides img.is-on.is-leaving { opacity: 0 }
+@media (hover: none) and (pointer: coarse) {
+  .hero-slides, .hero-fig .cap { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none }
+  .hero-slides img { -webkit-user-drag: none }
+}
 @media (min-width: 861px) {
   .hero .wrap { grid-template-rows: auto auto; row-gap: 14px; align-items: stretch }
   .hero-text, .hero-fig { display: grid; grid-row: span 2; grid-template-rows: subgrid; align-self: stretch }
@@ -277,16 +281,21 @@ section { padding-block: 72px }
 
 /* about */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start }
-.about-video { width: 100%; aspect-ratio: 16 / 9; min-height: 202px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); box-shadow: var(--frame-glow) }
+.about-video, .proj-banner { width: 100%; aspect-ratio: 16 / 9; min-height: 202px; margin-inline: auto }
+@media (min-width: 861px) {
+  /* Convert the available height (viewport minus 238px) to a 16:9 width. */
+  .about-video, .proj-banner { width: min(100%, max(359.12px, calc(177.7778vh - 423.111px))); width: min(100%, max(359.12px, calc(177.7778svh - 423.111px))) }
+}
+.about-video { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); box-shadow: var(--frame-glow); margin-bottom: 28px }
 .about-video iframe { display: block; width: 100%; height: 100%; border: 0 }
 .video-preview { display: grid; position: relative; width: 100%; height: 100%; place-items: center; background: #111 }
-.video-preview img { position: absolute; width: 100%; height: 100%; object-fit: cover }
+.video-preview img { position: absolute; width: 100%; height: 100%; object-fit: contain }
 .video-play { position: relative; display: grid; place-items: center; width: 68px; height: 48px; border-radius: 12px; background: #e00; color: #fff; font-size: 26px }
 .video-preview:focus-visible { outline-offset: -4px }
 .video-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0 }
 .video-fallback.video-ready { display: none }
-@media (max-width: 241px) { .about-video { display: none } .video-fallback.video-ready { display: block } }
-.page-head .video-fallback { margin: 10px 0 24px; font-size: 15px }
+.page-head .video-fallback { margin: -18px 0 24px; font-size: 15px }
+@media (max-width: 241px) { .about-video { display: none } .video-fallback.video-ready { display: block } .page-head .video-fallback { margin: 0 0 28px } }
 .video-fallback a { color: var(--brand-text) }
 .vision-list { display: flex; flex-direction: column; gap: 28px; min-width: 0 }
 .vision { border-left: 4px solid var(--brand); padding-left: 22px; display: flex; flex-direction: column; gap: 12px }
@@ -316,7 +325,7 @@ a.proj:hover { transform: translateY(-3px); border-color: var(--brand-text) }
 .proj-body { padding: 0 16px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; min-width: 0 }
 .proj-body h2 { margin: 0; font-size: 19px; font-weight: 600 }
 .proj-body p { margin: 0; color: var(--ink-2); font-size: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
-.proj-banner { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; object-position: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; margin-bottom: 28px }
+.proj-banner { display: block; object-fit: contain; object-position: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; margin-bottom: 28px }
 .proj-facts { background: var(--band); color: var(--band-ink-2); border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; gap: 16px; margin: 8px 0 28px }
 .proj-facts[hidden] { display: none }
 .proj-facts h2 { margin: 0; color: var(--band-ink); font-size: 22px }
