@@ -2,7 +2,7 @@
 
 ## 2026-11-07 — About and FAQ copy commit preparation
 
-- `REQ-0027` is implemented and independently verified; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized push, PR and squash merge subject to checks. Next: complete and verify that workflow; verify deployment separately. Preserve the branch.
+- `REQ-0027`: see `TASKS.md` for status and `VALIDATION_SUMMARY.md` for evidence. Next: complete and verify the authorized PR workflow; verify deployment separately. Preserve the branch.
 
 ## 2026-11-07 — awaiting the next request
 
