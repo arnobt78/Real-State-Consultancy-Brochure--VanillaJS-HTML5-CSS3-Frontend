@@ -40,6 +40,38 @@
     var open = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', open);
   });
 
+  /* Enhance the image links when native modal dialogs are available. */
+  var galleryLinks = document.querySelectorAll('.gallery-open');
+  if (galleryLinks.length && typeof HTMLDialogElement !== 'undefined' && HTMLDialogElement.prototype.showModal) {
+    var galleryDialog = document.createElement('dialog');
+    galleryDialog.className = 'gallery-dialog';
+    galleryDialog.setAttribute('aria-labelledby', 'gallery-dialog-title');
+    document.body.appendChild(galleryDialog);
+    var galleryTrigger = null;
+    galleryDialog.addEventListener('close', function () { if (galleryTrigger) galleryTrigger.focus(); });
+    galleryLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        var image = link.querySelector('img').cloneNode(true);
+        image.removeAttribute('loading');
+        var details = document.createElement('div');
+        details.className = 'gallery-details';
+        link.nextElementSibling.childNodes.forEach(function (node) { details.appendChild(node.cloneNode(true)); });
+        details.querySelector('h2').id = 'gallery-dialog-title';
+        var media = document.createElement('div');
+        media.className = 'gallery-dialog-media';
+        var close = document.createElement('button');
+        close.type = 'button'; close.className = 'gallery-dialog-close';
+        close.innerHTML = '<span aria-hidden="true">×</span><span class="video-label" lang="bn">বন্ধ করুন</span><span class="video-label" lang="en">Close</span>';
+        close.addEventListener('click', function () { galleryDialog.close(); });
+        media.appendChild(image); media.appendChild(close);
+        galleryDialog.replaceChildren(media, details);
+        try { galleryDialog.showModal(); } catch (e) { return; }
+        event.preventDefault(); galleryTrigger = link; close.focus();
+      });
+    });
+  }
+
   /* Keep the preview as a direct link if scripting or the embedded player is unavailable. */
   var videoPreview = document.querySelector('.video-preview');
   var videoFallback = document.querySelector('.video-fallback');

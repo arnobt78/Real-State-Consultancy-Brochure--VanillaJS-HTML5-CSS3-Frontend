@@ -336,6 +336,19 @@ a.proj:hover { transform: translateY(-3px); border-color: var(--brand-text) }
 .proj-note { margin-bottom: 16px }
 .proj-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start }
 .proj-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; border: 1px solid var(--line) }
+.gallery-card { margin: 0; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--frame-glow) }
+.gallery-open { display: block; border-radius: 18px 18px 0 0 }
+.proj-gallery .gallery-card img { border: 0; border-radius: 0; box-shadow: none }
+.gallery-details { padding: 16px; overflow-wrap: anywhere }
+.gallery-details h2 { font-size: 19px; font-weight: 600; margin: 0 0 8px }
+.gallery-details p { color: var(--ink-2); font-size: 15px; margin: 4px 0 0 }
+.gallery-details strong { color: var(--ink); font-weight: 600 }
+.gallery-dialog { width: min(90vw, 1000px); max-width: 90vw; max-height: 90vh; max-height: 90dvh; padding: 0; border: 1px solid var(--line); border-radius: 18px; color: var(--ink); background: var(--surface); box-shadow: var(--frame-glow); overflow: auto }
+.gallery-dialog::backdrop { background: rgba(0, 0, 0, .72); backdrop-filter: blur(5px) }
+.gallery-dialog-media { position: relative; display: grid; place-items: center; background: var(--bg) }
+.gallery-dialog-media img { display: block; max-width: 100%; max-height: 55vh; max-height: 55dvh; width: auto; height: auto; object-fit: contain; border-radius: 18px }
+.gallery-dialog-close { position: absolute; top: 10px; left: 10px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, .65); border-radius: 50%; background: rgba(0, 0, 0, .8); color: #fff; font-size: 28px; cursor: pointer }
+.gallery-dialog-close:focus-visible { outline-offset: -4px }
 .proj-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; margin-bottom: 28px }
 @media (max-width: 860px) { .proj-grid { grid-template-columns: repeat(2, 1fr) } .proj-gallery { grid-template-columns: 1fr } }
 @media (max-width: 520px) { .proj-grid { grid-template-columns: 1fr } a.proj:hover { transform: none } }

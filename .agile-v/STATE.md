@@ -1,5 +1,9 @@
 # STATE
 
+## 2026-11-07 — project gallery cards commit preparation
+
+- `REQ-0028`: see `TASKS.md` for status and `VALIDATION_SUMMARY.md` for evidence. Next: complete and verify the authorized PR workflow; verify deployment separately. Preserve the branch and the unrelated local hero image change.
+
 ## 2026-11-07 — About and FAQ copy commit preparation
 
 - `REQ-0027`: see `TASKS.md` for status and `VALIDATION_SUMMARY.md` for evidence. Next: complete and verify the authorized PR workflow; verify deployment separately. Preserve the branch.
