@@ -1,5 +1,13 @@
 # REQUIREMENTS
 
+## REQ-0029 Updated fourth hero image (approved 2026-11-07)
+
+Include the supplied replacement `hero-4.jpeg` in the existing home slideshow, preserving its fourth caption and slideshow behavior.
+
+## REQ-0028 Project gallery cards and dialog (approved 2026-11-07)
+
+Show the supplied bilingual titles, project types, locations and test instruments with the 13 images on the design, solar and concrete detail pages. Open each image in a responsive, accessible shared dialog with matching details and uncropped image; retain direct image links without JavaScript. Preserve the other project galleries.
+
 ## REQ-0027 About and FAQ copy (approved 2026-11-07)
 
 Replace the About introduction with the supplied bilingual Who We Are and What We Do headings and text. Replace the first FAQ answer with the supplied bilingual wording and keep its Bangla FAQPage structured data identical to the visible answer. Preserve the About video, remaining content and navigation.

@@ -1,5 +1,15 @@
 # VALIDATION SUMMARY
 
+## 2026-11-07 — updated fourth hero image (`REQ-0029`)
+
+- The supplied image is 1024×768. Local Chrome checks at 390 and 1440px confirmed it loads as the fourth slide with its existing English consultation caption, without observed horizontal overflow or page errors. Production, physical devices and other browsers were not tested.
+
+## 2026-11-07 — project gallery cards and dialog (`REQ-0028`)
+
+- Local and independent Chrome checks covered all 13 images, supplied project details and bilingual card/dialog content at phone and desktop widths. Image fit, keyboard activation, Escape and Close, focus return, short-screen scrolling, no-JavaScript and unavailable or failing native-dialog fallbacks passed.
+- All 15 routes passed local HTTP, language-switching and horizontal-overflow checks at 390 and 1440px. `node --check public/js/site.js` and `git diff --check` passed.
+- Production, physical devices, other browsers and performance benchmarks were not tested. Existing layout overflow at 240px is outside this task. No repository lint, typecheck, test suite or build command exists.
+
 ## 2026-11-07 — About and FAQ copy (`REQ-0027`)
 
 - Independent checks compared the supplied About headings and all six paragraphs, both FAQ answers and Bangla FAQPage structured data exactly. Local Chrome checks covered both languages at 320, 390, 768 and 1440px without observed horizontal overflow; existing overflow at 240px remains outside this change.
