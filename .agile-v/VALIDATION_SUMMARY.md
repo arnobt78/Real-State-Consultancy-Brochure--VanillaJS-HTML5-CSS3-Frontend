@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-07 — About and FAQ copy (`REQ-0027`)
+
+- Independent checks compared the supplied About headings and all six paragraphs, both FAQ answers and Bangla FAQPage structured data exactly. Local Chrome checks covered both languages at 320, 390, 768 and 1440px without observed horizontal overflow; existing overflow at 240px remains outside this change.
+- Local and independent checks covered the About video fallback and activation with and without JavaScript; live YouTube playback advanced in local Chrome. All 15 routes passed local HTTP, page-error and language-switching checks. Contact validation, service preselection, Bangla digits, WhatsApp preview and edit passed; no message was sent.
+- `git diff --check` and `node --check public/js/site.js` passed. Production, physical devices, other browsers and performance benchmarks were not tested. No repository lint, typecheck, test suite or build command exists.
+
 ## 2026-11-07 — responsive frames, touch and copy (`REQ-0024`–`REQ-0026`)
 
 - Local and independent Chrome checks covered all five slideshow images and captions in both languages at phone and desktop widths, including the updated fourth image, timing and touch-emulated holds, cancellation, scrolling and reduced motion. Native long-press behavior on physical phones remains unverified.

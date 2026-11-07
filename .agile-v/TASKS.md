@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-07 — About and FAQ copy
+
+- `REQ-0027`: implemented and independently verified. The user authorized branch push, PR and squash merge subject to checks; verify the remote merge and deployment separately.
+
 ## 2026-11-07 — responsive frames, touch and copy
 
 - `REQ-0024`–`REQ-0026`: implemented and independently verified. The user authorized the feature-branch push, PR and squash merge subject to checks; verify remote merge and deployment separately.
