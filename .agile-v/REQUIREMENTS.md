@@ -1,5 +1,9 @@
 # REQUIREMENTS
 
+## REQ-0029 Updated fourth hero image (approved 2026-11-07)
+
+Include the supplied replacement `hero-4.jpeg` in the existing home slideshow, preserving its fourth caption and slideshow behavior.
+
 ## REQ-0028 Project gallery cards and dialog (approved 2026-11-07)
 
 Show the supplied bilingual titles, project types, locations and test instruments with the 13 images on the design, solar and concrete detail pages. Open each image in a responsive, accessible shared dialog with matching details and uncropped image; retain direct image links without JavaScript. Preserve the other project galleries.

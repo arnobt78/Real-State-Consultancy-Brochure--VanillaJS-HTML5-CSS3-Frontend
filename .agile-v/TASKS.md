@@ -2,7 +2,7 @@
 
 ## 2026-11-07 — project gallery cards and dialog
 
-- `REQ-0028`: implemented and independently verified. The user authorized branch push, PR and squash merge subject to checks; verify remote merge and deployment separately.
+- `REQ-0028` and `REQ-0029`: implemented and verified. The user authorized branch push, PR and squash merge subject to checks; verify remote merge and deployment separately.
 
 ## 2026-11-07 — About and FAQ copy
 

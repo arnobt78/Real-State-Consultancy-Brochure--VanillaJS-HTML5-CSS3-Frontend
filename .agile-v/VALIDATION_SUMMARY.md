@@ -1,5 +1,9 @@
 # VALIDATION SUMMARY
 
+## 2026-11-07 — updated fourth hero image (`REQ-0029`)
+
+- The supplied image is 1024×768. Local Chrome checks at 390 and 1440px confirmed it loads as the fourth slide with its existing English consultation caption, without observed horizontal overflow or page errors. Production, physical devices and other browsers were not tested.
+
 ## 2026-11-07 — project gallery cards and dialog (`REQ-0028`)
 
 - Local and independent Chrome checks covered all 13 images, supplied project details and bilingual card/dialog content at phone and desktop widths. Image fit, keyboard activation, Escape and Close, focus return, short-screen scrolling, no-JavaScript and unavailable or failing native-dialog fallbacks passed.
