@@ -1,5 +1,9 @@
 # REQUIREMENTS
 
+## REQ-0027 About and FAQ copy (approved 2026-11-07)
+
+Replace the About introduction with the supplied bilingual Who We Are and What We Do headings and text. Replace the first FAQ answer with the supplied bilingual wording and keep its Bangla FAQPage structured data identical to the visible answer. Preserve the About video, remaining content and navigation.
+
 ## REQ-0024 Responsive About and project media frames (approved 2026-11-07)
 
 Share centered, uncropped sizing for the About video and six project banners: full-width with a 202px minimum through 860px, and a viewport-height-based 16:9 limit above that breakpoint. Preserve YouTube's minimum player size and narrow fallback.

@@ -1,5 +1,15 @@
 # STATE
 
+## 2026-11-07 — About and FAQ copy commit preparation
+
+- `REQ-0027` is implemented and independently verified; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized push, PR and squash merge subject to checks. Next: complete and verify that workflow; verify deployment separately. Preserve the branch.
+
+## 2026-11-07 — awaiting the next request
+
+- Cycle `C1`. The user will provide a new task; no new implementation is approved. Read the Agile V protocol, project instructions, state, checkpoints, approvals and requested skills. The pending `CP-0001` is historical: `GATE-0001` was superseded by `DEC-0005`.
+- The `REQ-0024`–`REQ-0026` commit-preparation note below predates the merge: remote `main` points to squash commit `0637e17`. The retained branch `fix/responsive-media-frames` was clean at `652e558` before this state update. Production was not checked during this readiness session.
+- Next: receive the request, inspect affected source and requirements, update relevant planning records, and present a scoped plan for approval before coding. Preserve existing work.
+
 ## 2026-11-07 — responsive frames, touch and copy commit preparation
 
 - `REQ-0024`–`REQ-0026` are implemented and independently verified; see `REQUIREMENTS.md` and `VALIDATION_SUMMARY.md`. The user authorized branch push, PR and squash merge subject to checks. Next: complete and verify that workflow; verify deployment separately. Preserve the branch.

@@ -265,6 +265,7 @@ section { padding-block: 72px }
 .page-head:has(.proj-actions) { padding-bottom: 0 }
 .page-head h1 { font-size: clamp(32px, 4.6vw, 52px); font-weight: 800; font-stretch: 92% }
 .page-head p { color: var(--ink-2); max-width: 44rem; margin-top: 12px; font-size: 18px }
+.page-head .about-intro-heading { font-size: clamp(22px, 2.4vw, 28px); margin-top: 28px }
 .doc { max-width: 44rem; display: flex; flex-direction: column; gap: 28px; padding-block: 28px 72px }
 .doc section { display: flex; flex-direction: column; gap: 8px }
 .doc h2 { font-size: clamp(22px, 2.4vw, 28px); font-weight: 700 }
