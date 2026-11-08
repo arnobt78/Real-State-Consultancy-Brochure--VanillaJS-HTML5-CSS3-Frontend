@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-08 — gallery, hero and responsive media polish (`REQ-0030`)
+
+- Local Chrome loaded all 15 routes at 390px without document overflow or page-level errors; 13 gallery cards opened dialogs and closed with Escape. Seven About/project frames passed 16:9 checks at 320, 768 and 1440px; no-JavaScript image and video links remained available.
+- Independent Chrome verification checked all 13 dialogs at 320 and 1440px, keyboard focus and Escape, bilingual content, reduced motion and fallback states. The new YouTube video played in local Chrome: its playback time advanced and its fallback hid when playback started. Two YouTube avatar requests were aborted without interrupting playback.
+- `node --check public/js/site.js` and `git diff --check` passed. Production, physical mobile devices, other browsers, and comprehensive performance/security audits were not tested; no repository lint, typecheck, test runner or build command exists.
+
 ## 2026-11-07 — updated fourth hero image (`REQ-0029`)
 
 - The supplied image is 1024×768. Local Chrome checks at 390 and 1440px confirmed it loads as the fourth slide with its existing English consultation caption, without observed horizontal overflow or page errors. Production, physical devices and other browsers were not tested.

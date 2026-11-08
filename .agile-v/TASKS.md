@@ -1,5 +1,10 @@
 # TASKS
 
+## 2026-11-08 — gallery and media verification / release plan
+
+- `REQ-0030`: implementation exists on `fix/gallery-media-polish`; independent verification passed including actual local YouTube playback. Record production and device limitations before commit preparation. The user requested a scoped plan and approval before implementation edits.
+- After verification, synchronize affected records, review the final diff and perform the explicitly requested branch, PR and squash-merge workflow only if checks and access permit. A saved credential authenticated the GitHub API; avoid printing or persisting it.
+
 ## 2026-11-07 — project gallery cards and dialog
 
 - `REQ-0028` and `REQ-0029`: implemented and verified. The user authorized branch push, PR and squash merge subject to checks; verify remote merge and deployment separately.

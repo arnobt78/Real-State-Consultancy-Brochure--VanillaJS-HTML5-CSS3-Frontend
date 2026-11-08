@@ -1,5 +1,10 @@
 # STATE
 
+## 2026-11-08 — PR 29 review
+
+- `REQ-0030`: implementation committed and pushed on `fix/gallery-media-polish`; PR #29 targets `main`. Independent verification and limitations are recorded in `VALIDATION_SUMMARY.md`.
+- The user authorized squash merge after review and checks. The latest approved plan supersedes the earlier video fallback visibility rule. Assess the completed review and checks, then merge if satisfactory; preserve the branch and verify deployment separately.
+
 ## 2026-11-07 — project gallery cards commit preparation
 
 - `REQ-0028` and `REQ-0029`: see `TASKS.md` for status and `VALIDATION_SUMMARY.md` for evidence. Next: complete and verify the authorized PR workflow; verify deployment separately. Preserve the branch.

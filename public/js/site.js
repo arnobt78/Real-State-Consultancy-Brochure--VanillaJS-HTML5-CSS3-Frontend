@@ -56,7 +56,7 @@
         image.removeAttribute('loading');
         var details = document.createElement('div');
         details.className = 'gallery-details';
-        link.nextElementSibling.childNodes.forEach(function (node) { details.appendChild(node.cloneNode(true)); });
+        link.querySelector('.gallery-details').childNodes.forEach(function (node) { details.appendChild(node.cloneNode(true)); });
         details.querySelector('h2').id = 'gallery-dialog-title';
         var media = document.createElement('div');
         media.className = 'gallery-dialog-media';
@@ -72,7 +72,7 @@
     });
   }
 
-  /* Keep the preview as a direct link if scripting or the embedded player is unavailable. */
+  /* Keep a direct link until YouTube confirms playback. */
   var videoPreview = document.querySelector('.video-preview');
   var videoFallback = document.querySelector('.video-fallback');
   if (videoPreview && videoFallback) {
@@ -83,10 +83,22 @@
       player.title = 'Build Safe introduction video';
       player.allow = 'autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       player.allowFullscreen = true;
-      player.src = 'https://www.youtube-nocookie.com/embed/9BET2pwd_2E?autoplay=1&rel=0&playsinline=1';
+      player.src = 'https://www.youtube-nocookie.com/embed/-jo_C1XRrMA?autoplay=1&rel=0&playsinline=1&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
+      videoPreview.parentElement.classList.add('video-activated');
       videoPreview.replaceWith(player);
       videoFallback.classList.remove('video-ready');
       player.focus();
+      var previousReady = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = function () {
+        if (typeof previousReady === 'function') previousReady();
+        new window.YT.Player(player, { events: {
+          onReady: function (e) { if (e.target.getPlayerState() === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); },
+          onStateChange: function (e) { if (e.data === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); },
+          onError: function () { videoFallback.classList.remove('video-ready'); }
+        } });
+      };
+      if (window.YT && window.YT.Player) window.onYouTubeIframeAPIReady();
+      else { var api = document.createElement('script'); api.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(api); }
     });
     videoFallback.classList.add('video-ready');
   }
