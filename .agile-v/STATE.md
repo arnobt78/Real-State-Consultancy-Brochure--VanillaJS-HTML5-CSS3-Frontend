@@ -1,5 +1,12 @@
 # STATE
 
+## 2026-11-08 — gallery and media verification / release planning
+
+- `REQ-0030` is implemented but uncommitted on `fix/gallery-media-polish`, based on `origin/main` at `4c7cabe` as last locally fetched. Seven published files are modified. Preserve these changes.
+- Local Chrome checks on 2026-11-08 loaded all 15 routes at 390px without page errors or horizontal overflow, opened all 13 gallery dialogs, checked seven media frames at 320/768/1440px, and checked no-JavaScript direct links. Independent Chrome verification confirmed real YouTube playback (playback time advanced) and fallback dismissal after playback. Production, physical mobile devices and other browsers remain unverified.
+- The user requested independent verification, planning records, a scoped plan and approval before implementation edits, followed by commit, push, PR and squash merge when verified. GitHub CLI has no active login; an existing credential helper successfully authenticated GitHub API as arnobt78. Do not commit or claim merge until checks and access are confirmed.
+- Next: complete independent verification, report results and limitations, and obtain approval for any implementation fixes; then resume the authorized release workflow subject to verification and GitHub access.
+
 ## 2026-11-07 — project gallery cards commit preparation
 
 - `REQ-0028` and `REQ-0029`: see `TASKS.md` for status and `VALIDATION_SUMMARY.md` for evidence. Next: complete and verify the authorized PR workflow; verify deployment separately. Preserve the branch.
