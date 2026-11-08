@@ -2,7 +2,7 @@
 
 ## REQ-0030 Gallery, hero and responsive media polish (approved 2026-11-08)
 
-Make the 13 gallery cards fully clickable and keyboard-accessible, retain image links without JavaScript, and fit full images and details in the existing dialog. Update the bilingual home message and phone-sized English label. Use YouTube video -jo_C1XRrMA with a direct-link fallback and responsive uncropped preview/player; preserve YouTube controls and player minimum dimensions. Fit project banners without cropping and preserve existing navigation and design.
+Make the 13 gallery cards fully clickable and keyboard-accessible, retain image links without JavaScript, and fit full images and details in the existing dialog. Update the bilingual home message and phone-sized English label. Use YouTube video -jo_C1XRrMA with a direct-link fallback and responsive uncropped preview/player; preserve YouTube controls and player minimum dimensions. Fit project banners without cropping and preserve existing navigation and design. The approved fallback behavior supersedes REQ-0023: after activation, hide the separate direct link only during confirmed playback; show it when playback fails or cannot be confirmed.
 
 ## REQ-0029 Updated fourth hero image (approved 2026-11-07)
 
