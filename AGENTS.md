@@ -159,3 +159,7 @@ Write:
 - next exact task
 
 Future agents should resume without reading chat history.
+
+## Shared branch workflow
+
+Use `preview-branch` as the single reusable working and pull-request branch. Base and synchronize it with `main` while preserving unmerged work and history. Push changes to `preview-branch`, open a pull request to `main`, and squash merge only when the user authorizes it. Do not create additional task branches unless the user requests or a concrete conflict requires one; never force-reset or discard work. Keep `main` and `preview-branch` after merged branch cleanup.
