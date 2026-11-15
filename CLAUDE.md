@@ -138,3 +138,7 @@ Always continue from
 unless instructed otherwise.
 
 Current stop: Worker `divine-dream-20ba` is connected to the brochure repository on branch `main`. Preview builds are off. The API token stays in Cloudflare. Pull request 16 starts the first Git build. After the merge, merge `main` back into `fix/footer-information` and leave that branch. The live pages change only after a Git deploy shows Ready. Do not click New deployment. Do not drag-upload `public/`. Vercel Production follows `main` and stays the test site. Do not open another branch. Do not push new implementation straight to `main`. Design and solar cards use the supplied 4:3 gallery images. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+
+## Shared branch workflow
+
+Use `preview-branch` as the single reusable working and pull-request branch. Base and synchronize it with `main` while preserving unmerged work and history. Push changes to `preview-branch`, open a pull request to `main`, and squash merge only when the user authorizes it. Do not create additional task branches unless the user requests or a concrete conflict requires one; never force-reset or discard work. Keep `main` and `preview-branch` after merged branch cleanup.

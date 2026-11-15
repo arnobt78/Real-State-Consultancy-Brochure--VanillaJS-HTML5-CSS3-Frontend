@@ -162,3 +162,7 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The Worker is connected to this one GitHub repository, production branch `main`, with preview builds off. The API token stays in Cloudflare. A new commit on `main` starts the build. Do not use the dashboard file upload.
 - Rationale: Connecting the repository did not build the commit already on `main`. The active deployment was still manual upload `e6b06886`.
 - Linked: `DEC-0019`
+
+## Shared branch workflow
+
+Use `preview-branch` as the single reusable working and pull-request branch. Base and synchronize it with `main` while preserving unmerged work and history. Push changes to `preview-branch`, open a pull request to `main`, and squash merge only when the user authorizes it. Do not create additional task branches unless the user requests or a concrete conflict requires one; never force-reset or discard work. Keep `main` and `preview-branch` after merged branch cleanup.

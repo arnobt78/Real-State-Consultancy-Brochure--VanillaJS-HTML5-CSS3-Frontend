@@ -1,3 +1,7 @@
+# Current checkpoint — 2026-11-15
+
+PR #30 was squash-merged into `main` as `215d8c3a901662b33456d8f72ceacb874c310ccc` after the available checks passed. Physical devices and Safari remain unverified. The user requests one reusable working branch, `preview-branch`, with pull requests into `main`; preserve unmerged work and avoid additional task branches. Older branch instructions below are historical and superseded. Next: finish publishing this workflow record and remove only confirmed merged, unchanged branches.
+
 # STATE
 
 ## 2026-11-15 — UI polish commit preparation
