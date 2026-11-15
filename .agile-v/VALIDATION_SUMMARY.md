@@ -1,5 +1,11 @@
 # VALIDATION SUMMARY
 
+## 2026-11-15 — typography, media and contact controls (`REQ-0031`)
+
+- Chrome checks covered both languages across all 15 routes at 320px, all 13 gallery dialogs and contact form validation/WhatsApp preview at 320, 390, 768 and 1440px. The six project banners retained their proportions; YouTube playback worked locally, and blocked-player and no-JavaScript fallbacks were visible.
+- Independent review found no new defect and checked gallery close behavior at four viewport sizes in both languages. A cold-load sample showed the 600-weight font request starting earlier after the targeted preload; this is not a guarantee of flicker-free loading.
+- At 200% CSS zoom on a 320px viewport, pre-existing horizontal overflow was reproduced with both the previous and current CSS. Safari automation was disabled; physical devices, production and comprehensive performance/security audits were not tested. `node --check public/js/site.js` and `git diff --check` passed. No repository lint, typecheck, test runner or build command exists.
+
 ## 2026-11-08 — gallery, hero and responsive media polish (`REQ-0030`)
 
 - Local Chrome loaded all 15 routes at 390px without document overflow or page-level errors; 13 gallery cards opened dialogs and closed with Escape. Seven About/project frames passed 16:9 checks at 320, 768 and 1440px; no-JavaScript image and video links remained available.

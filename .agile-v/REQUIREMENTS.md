@@ -1,5 +1,9 @@
 # REQUIREMENTS
 
+## REQ-0031 Typography, media and contact controls (approved 2026-11-15)
+
+Align the English hero label with the Bangla label, align About body and secondary-heading typography with FAQ, preserve uncropped media, enlarge the gallery dialog and maintain a circular accessible close control, style the native contact selects consistently, and optimize critical self-hosted font loading. Preserve responsive behavior, accessibility, media playback and contact flow.
+
 ## REQ-0030 Gallery, hero and responsive media polish (approved 2026-11-08)
 
 Make the 13 gallery cards fully clickable and keyboard-accessible, retain image links without JavaScript, and fit full images and details in the existing dialog. Update the bilingual home message and phone-sized English label. Use YouTube video -jo_C1XRrMA with a direct-link fallback and responsive uncropped preview/player; preserve YouTube controls and player minimum dimensions. Fit project banners without cropping and preserve existing navigation and design. The approved fallback behavior supersedes REQ-0023: after activation, hide the separate direct link only during confirmed playback; show it when playback fails or cannot be confirmed.
