@@ -1,5 +1,9 @@
 # TASKS
 
+## 2026-11-15 — UI polish commit preparation
+
+- `REQ-0031`: implemented and independently reviewed. Local Chrome validation and known limitations are recorded in `VALIDATION_SUMMARY.md`. The user authorized branch push, PR and squash merge subject to checks.
+
 ## 2026-11-08 — gallery and media verification / release plan
 
 - `REQ-0030`: implementation exists on `fix/gallery-media-polish`; independent verification passed including actual local YouTube playback. Record production and device limitations before commit preparation. The user requested a scoped plan and approval before implementation edits.

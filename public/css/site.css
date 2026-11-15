@@ -1,6 +1,6 @@
 /* Layout: plan-sheet grid header, alternating image/text rows, charcoal bands for emphasis */
 /* Same-origin faces. optional stops a late file from swapping after first paint.
-   Each page preloads Hind Siliguri 400 and the condensed Anek Bangla 800 used on the hero. */
+   Each page preloads Hind Siliguri 400 and 600, and the condensed Anek Bangla 800 used on the hero. */
 @font-face {
   font-family: "Anek Bangla";
   font-style: normal;
@@ -266,6 +266,8 @@ section { padding-block: 72px }
 .page-head h1 { font-size: clamp(32px, 4.6vw, 52px); font-weight: 800; font-stretch: 92% }
 .page-head p { color: var(--ink-2); max-width: 44rem; margin-top: 12px; font-size: 18px }
 .page-head .about-intro-heading { font-size: clamp(22px, 2.4vw, 28px); margin-top: 28px }
+body[data-page="about"] .page-head > p:not(.video-fallback), body[data-page="about"] .vision p { font-size: 16px }
+body[data-page="about"] .page-head .about-intro-heading { font-size: clamp(18px, 2vw, 22px); font-weight: 700 }
 .doc { max-width: 44rem; display: flex; flex-direction: column; gap: 28px; padding-block: 28px 72px }
 .doc section { display: flex; flex-direction: column; gap: 8px }
 .doc h2 { font-size: clamp(22px, 2.4vw, 28px); font-weight: 700 }
@@ -345,17 +347,18 @@ a.proj:hover { transform: translateY(-3px); border-color: var(--brand-text) }
 .gallery-details h2 { font-size: 19px; font-weight: 600; margin: 0 0 8px }
 .gallery-details p { color: var(--ink-2); font-size: 15px; margin: 4px 0 0 }
 .gallery-details strong { color: var(--ink); font-weight: 600 }
-.gallery-dialog { width: min(90vw, 73.33vh, 1000px); width: min(90vw, 73.33dvh, 1000px); max-width: 90vw; max-height: 90vh; max-height: 90dvh; padding: 0; border: 1px solid var(--line); border-radius: 18px; color: var(--ink); background: var(--surface); box-shadow: var(--frame-glow); overflow: auto }
+.gallery-dialog { width: min(90vw, 93.33vh, 1000px); width: min(90vw, 93.33dvh, 1000px); max-width: 90vw; max-height: 90vh; max-height: 90dvh; padding: 0; border: 1px solid var(--line); border-radius: 18px; color: var(--ink); background: var(--surface); box-shadow: var(--frame-glow); overflow: auto }
 .gallery-dialog::backdrop { background: rgba(0, 0, 0, .72); backdrop-filter: blur(5px) }
 .gallery-dialog-media { position: relative; display: grid; place-items: center; background: var(--bg) }
-.gallery-dialog-media img { display: block; max-width: 100%; max-height: 55vh; max-height: 55dvh; width: auto; height: auto; object-fit: contain; border-radius: 18px }
-.gallery-dialog-close { position: absolute; top: 10px; left: 10px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, .65); border-radius: 50%; background: rgba(0, 0, 0, .8); color: #fff; font-size: 28px; cursor: pointer }
-.gallery-dialog-close:focus-visible { outline-offset: -4px }
+.gallery-dialog-media img { display: block; max-width: 100%; max-height: 70vh; max-height: 70dvh; width: auto; height: auto; object-fit: contain; border-radius: 18px }
+.gallery-dialog-close { appearance: none; -webkit-appearance: none; position: absolute; top: 10px; left: 10px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255, 255, 255, .65); border-radius: 50%; background: rgba(0, 0, 0, .8); color: #fff; font: 28px/1 system-ui, sans-serif; cursor: pointer }
+.gallery-dialog-close:focus-visible { outline-offset: -4px; border-radius: 50% }
 .proj-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; margin-bottom: 28px }
 @media (max-width: 860px) { .proj-grid { grid-template-columns: repeat(2, 1fr) } .proj-gallery { grid-template-columns: 1fr } }
 @media (max-width: 520px) { .proj-grid { grid-template-columns: 1fr } a.proj:hover, .gallery-card:hover { transform: none } }
 
-@media (max-width: 520px) { .hero-copy .eyebrow [lang="en"] { font-size: 11px; letter-spacing: .03em } }
+.hero-copy .eyebrow [lang="en"] { font-family: var(--f-body); font-weight: 600; letter-spacing: .01em }
+@media (max-width: 520px) { .hero-copy .eyebrow [lang="en"] { font-size: clamp(11px, 3.35vw, 13px) } }
 @media (prefers-reduced-motion: reduce) { .gallery-card { transition: none } .gallery-card:hover { transform: none } }
 
 /* contact */
@@ -366,6 +369,8 @@ form.enq, .sent { background: var(--surface); border: 1px solid var(--line); bor
 .f label { font-weight: 600; font-size: 15px }
 .f label .req { color: var(--brand-text) }
 .f input, .f select, .f textarea { font: 16px var(--f-body); color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 12px; width: 100% }
+.f input:not([type="radio"]), .f select { min-height: 48px }
+.f select { appearance: none; -webkit-appearance: none; padding-right: 40px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23988e88' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center }
 .f textarea { min-height: 110px; resize: vertical }
 .f input:focus, .f select:focus, .f textarea:focus { outline: none; border-color: var(--brand-text) }
 .f .err { color: var(--brand-text); font-size: 14px }

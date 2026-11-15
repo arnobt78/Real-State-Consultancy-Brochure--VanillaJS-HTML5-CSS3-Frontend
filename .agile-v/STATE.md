@@ -1,5 +1,15 @@
 # STATE
 
+## 2026-11-15 — UI polish commit preparation
+
+- `REQ-0031` is implemented on `fix/ui-typography-controls`; local and independent verification is recorded in `VALIDATION_SUMMARY.md`. At 200% CSS zoom on a 320px viewport, existing site-wide overflow remains outside this change.
+- The user authorized branch push, PR and squash merge after verification and checks. Next: review the final diff, complete the PR workflow if checks permit, and verify production separately. Preserve the branch.
+
+## 2026-11-08 — PR 29 merged
+
+- `REQ-0030`: PR #29 squash-merged into `main` as `674575ccfefa9121142c5cb00e940076a2e476ca`. The feature branch is retained. See `VALIDATION_SUMMARY.md` for local verification and limitations.
+- Next: verify the production deployment separately when available; no further implementation is pending in this session. This historical resume note predates the current task.
+
 ## 2026-11-08 — PR 29 review
 
 - `REQ-0030`: implementation committed and pushed on `fix/gallery-media-polish`; PR #29 targets `main`. Independent verification and limitations are recorded in `VALIDATION_SUMMARY.md`.
