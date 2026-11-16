@@ -1,3 +1,8 @@
+## 2026-11-16 — active navigation typography
+
+- The user approved REQ-0032. The shared active navigation rule now inherits the default link weight; active color and hover styles remain.
+- Branch: `preview-branch`. Headless Chrome CSS checks at 320px and 1440px confirmed matching 16px/500 typography and distinct active color; all 15 pages use the shared navigation. Full route interactions, Bangla rendering, Safari and physical devices remain unverified. Independent headless Chrome typography checks passed for all six links in both languages at phone and desktop widths; see VALIDATION_SUMMARY.md for coverage and limitations. The user authorized commit, push and squash merge through a PR on preview-branch.
+
 # Current checkpoint — 2026-11-15
 
 PR #30 was squash-merged into `main` as `215d8c3a901662b33456d8f72ceacb874c310ccc` after the available checks passed. Physical devices and Safari remain unverified. The user requests one reusable working branch, `preview-branch`, with pull requests into `main`; preserve unmerged work and avoid additional task branches. Older branch instructions below are historical and superseded. Next: finish publishing this workflow record and remove only confirmed merged, unchanged branches.

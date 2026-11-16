@@ -1,3 +1,7 @@
+## REQ-0032 Active navigation typography (approved 2026-11-16)
+
+Active desktop and mobile navigation links use the same font size and weight as inactive links while retaining the existing active color, hover and focus behavior.
+
 # REQUIREMENTS
 
 ## REQ-0031 Typography, media and contact controls (approved 2026-11-15)
