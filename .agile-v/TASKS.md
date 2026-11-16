@@ -1,3 +1,11 @@
+## REQ-0035
+
+- Implemented and independently checked in local Chrome, including actual playback, blocked fallback and bilingual mobile/desktop layout; shared header overflow at 241–242px and physical-device/cross-browser checks remain. Preserve REQ-0034.
+
+## REQ-0034
+
+- Implemented; independent Chrome checks passed for responsive frame matching, keyboard activation, blocked-player fallback and actual playback. Physical devices, other browsers and production remain unverified.
+
 ## REQ-0033
 
 - Implemented; independent Chrome checks covered dialog focus and Escape, radio keyboard selection, six banners and About/FAQ typography. All three WhatsApp stage previews and links passed in both languages. Safari and physical-device checks remain. Preserve the unrelated README change.

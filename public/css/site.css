@@ -79,7 +79,7 @@
 /* Both languages are in the HTML. This line shows only the active one. */
 html:not([data-lang="en"]) [lang="en"], html[data-lang="en"] [lang="bn"] { display: none }
 * { box-sizing: border-box }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.65; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 18px; line-height: 1.65; }
 html[data-lang="en"] body { line-height: 1.6 }
 a { color: inherit }
 img { max-width: 100%; display: block; height: auto }
@@ -155,7 +155,7 @@ section { padding-block: 72px }
 .hero h1 { font-size: clamp(34px, 5.2vw, 60px); font-weight: 800; font-stretch: 92% }
 .box { display: inline-block; background: var(--brand); color: var(--on-brand); padding: 0 .22em; border-radius: 6px; line-height: 1.25 }
 .box-line { background: transparent; color: var(--brand-text); outline: 3px dashed var(--brand-text); outline-offset: -3px }
-.hero .lead { font-size: 19px; color: var(--ink-2); max-width: 34rem }
+.hero .lead { font-size: 18px; color: var(--ink-2); max-width: 34rem }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px }
 .hero-meta { min-width: 0; border-left: 4px solid var(--brand); padding-left: 14px; color: var(--ink-2); font-size: 15px }
 .hero-fig { position: relative; isolation: isolate; min-width: 0 }
@@ -268,10 +268,12 @@ section { padding-block: 72px }
 .page-head .about-intro-heading { font-size: clamp(22px, 2.4vw, 28px); margin-top: 28px }
 body[data-page="about"] .page-head > p:not(.video-fallback), body[data-page="about"] .vision p { font-size: 18px }
 body[data-page="about"] .page-head .about-intro-heading { font-size: clamp(18px, 2vw, 22px); font-weight: 700 }
+body[data-page="about"] .page-head h1 { font-size: clamp(18px, 2vw, 22px); font-weight: 700; font-stretch: normal }
+body[data-page="about"] .about-video { margin-top: 28px }
 .doc { max-width: 44rem; display: flex; flex-direction: column; gap: 28px; padding-block: 28px 72px }
 .doc section { display: flex; flex-direction: column; gap: 8px }
 .doc h2 { font-size: clamp(22px, 2.4vw, 28px); font-weight: 700 }
-.doc p, .doc li { color: var(--ink-2); font-size: 17px }
+.doc p, .doc li { color: var(--ink-2); font-size: 18px }
 .doc ul { margin: 4px 0 0; padding-left: 1.15em; display: flex; flex-direction: column; gap: 6px }
 .doc a { color: var(--brand-text); font-weight: 600; text-decoration: none }
 .doc a:hover { text-decoration: underline }
@@ -290,7 +292,7 @@ body[data-page="about"] .page-head .about-intro-heading { font-size: clamp(18px,
   /* Convert the available height (viewport minus 238px) to a 16:9 width. */
   .about-video, .proj-banner { width: min(100%, max(359.12px, calc(177.7778vh - 423.111px))); width: min(100%, max(359.12px, calc(177.7778svh - 423.111px))) }
 }
-.about-video { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); box-shadow: var(--frame-glow); margin-bottom: 28px }
+.about-video { outline: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); box-shadow: var(--frame-glow); margin-bottom: 28px }
 .about-video iframe { display: block; width: 100%; height: 100%; border: 0 }
 .video-preview { display: grid; position: relative; width: 100%; height: 100%; place-items: center; background: #111 }
 .video-preview img { position: absolute; width: 100%; height: 100%; object-fit: contain }
@@ -437,7 +439,8 @@ footer .socials a:hover { background: rgba(255,255,255,.06) }
 /* phone */
 .mbar { display: none }
 @media (max-width: 640px) {
-  body { font-size: 16px }
+  body { font-size: 17px }
+  .page-head p, body[data-page="about"] .page-head > p:not(.video-fallback), body[data-page="about"] .vision p, .faq-item p, .doc p, .doc li { font-size: 17px }
   section { padding-block: 52px }
   .menu-btn { width: 46px; height: 46px }
   .hero { padding-block: 32px 44px }
