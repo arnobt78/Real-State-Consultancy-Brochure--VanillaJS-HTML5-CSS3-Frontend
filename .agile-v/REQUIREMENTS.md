@@ -1,3 +1,11 @@
+## REQ-0035 About page, channel and descriptive text (approved 2026-11-16)
+
+Update the YouTube channel URL; order About introduction, prepared user-initiated video, and services description; retain uncropped height-capped media and fallback; align descriptive text responsively.
+
+## REQ-0034 About video frame (approved 2026-11-16)
+
+Align the About video preview frame edge with project banners while preserving uncropped 16:9 content, accessible playback, the direct fallback and the YouTube player minimum.
+
 ## REQ-0033 Dialog, contact and typography polish (approved 2026-11-16)
 
 Center the gallery close icon with touch-aware focus styling; restore compact native project-stage radios; eliminate banner frame gaps without image distortion; align About body and FAQ answer text at 18px. Preserve interactions and accessibility.

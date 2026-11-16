@@ -1,3 +1,12 @@
+## 2026-11-16 — About page and channel updates
+
+- REQ-0035 implemented on `preview-branch`, preserving REQ-0034. Independent Chrome checks at 320px and 1440px in both languages confirmed eager paused player, actual playback, blocked-player fallback and responsive typography; JSON-LD parsed on all 15 pages with 33 updated channel references. At 241–242px the existing shared header overflows; physical devices, other browsers and channel ownership remain unverified. Full-width cover at a 1140×562px frame would crop about 40px from the video top and bottom; retained the uncropped height-capped frame. Independent verification also covered 15 routes at 320, 640, 641 and 1440px in both languages; see VALIDATION_SUMMARY.md. The user authorized push, PR and squash merge on preview-branch.
+
+## 2026-11-16 — About video frame
+
+- REQ-0034 is approved on `preview-branch`. Changed the About frame border to an outside outline to match project banners.
+- Independent local Chrome checks passed at 242, 320 and 1440px in both languages: frame dimensions matched project banners, keyboard activation and blocked-player fallback worked, and YouTube playback advanced. Physical devices, other browsers and production remain unverified; YouTube may show bands. Next: commit preparation when requested; do not push or deploy during implementation.
+
 ## 2026-11-16 — dialog and contact UI polish
 
 - REQ-0033 is approved and implemented on `preview-branch`. Preserve the pre-existing README.md change.
@@ -158,7 +167,7 @@ Public contact data in the pages (intentional, not a secret):
 - Office: Dilara Tower, 77 Sonargaon Road, Hatirpool, Dhaka-1205
 - Facebook: `https://www.facebook.com/buildsafe.ec`
 - LinkedIn: `https://www.linkedin.com/in/md-mamunoor-rashid/`
-- YouTube: `https://www.youtube.com/@BuildSafe-EC`
+- YouTube: `https://www.youtube.com/@BuildSafeEC`
 - Messenger: `https://m.me/buildsafe.ec`
 - Email: `contact.buildsafe@gmail.com`
 

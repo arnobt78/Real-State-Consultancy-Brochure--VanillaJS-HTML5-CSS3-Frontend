@@ -74,35 +74,28 @@
     });
   }
 
-  /* Keep a direct link until YouTube confirms playback. */
+  /* Prepare the player without starting playback; retain the direct fallback until ready. */
   var videoPreview = document.querySelector('.video-preview');
   var videoFallback = document.querySelector('.video-fallback');
-  if (videoPreview && videoFallback) {
-    videoPreview.addEventListener('click', function (event) {
-      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      var player = document.createElement('iframe');
-      player.title = 'Build Safe introduction video';
-      player.allow = 'autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      player.allowFullscreen = true;
-      player.src = 'https://www.youtube-nocookie.com/embed/-jo_C1XRrMA?autoplay=1&rel=0&playsinline=1&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
-      videoPreview.parentElement.classList.add('video-activated');
-      videoPreview.replaceWith(player);
-      videoFallback.classList.remove('video-ready');
-      player.focus();
-      var previousReady = window.onYouTubeIframeAPIReady;
-      window.onYouTubeIframeAPIReady = function () {
-        if (typeof previousReady === 'function') previousReady();
-        new window.YT.Player(player, { events: {
-          onReady: function (e) { if (e.target.getPlayerState() === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); },
-          onStateChange: function (e) { if (e.data === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); },
-          onError: function () { videoFallback.classList.remove('video-ready'); }
-        } });
-      };
-      if (window.YT && window.YT.Player) window.onYouTubeIframeAPIReady();
-      else { var api = document.createElement('script'); api.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(api); }
-    });
-    videoFallback.classList.add('video-ready');
+  if (videoPreview && videoFallback && window.matchMedia('(min-width: 242px)').matches) {
+    var player = document.createElement('iframe');
+    player.title = 'Build Safe introduction video';
+    player.allow = 'autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    player.allowFullscreen = true;
+    player.src = 'https://www.youtube-nocookie.com/embed/-jo_C1XRrMA?rel=0&playsinline=1&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
+    videoPreview.parentElement.classList.add('video-activated');
+    videoPreview.replaceWith(player);
+    var previousReady = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = function () {
+      if (typeof previousReady === 'function') previousReady();
+      new window.YT.Player(player, { events: {
+        onReady: function (e) { if (e.target.getPlayerState() === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); },
+        onStateChange: function (e) { if (e.data === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); else videoFallback.classList.remove('video-ready'); },
+        onError: function () { videoFallback.classList.remove('video-ready'); }
+      } });
+    };
+    if (window.YT && window.YT.Player) window.onYouTubeIframeAPIReady();
+    else { var api = document.createElement('script'); api.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(api); }
   }
 
   var toastEl = document.getElementById('toast'), toastT;
