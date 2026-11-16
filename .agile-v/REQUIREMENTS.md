@@ -1,3 +1,7 @@
+## REQ-0036 About order, video preview and heading loading (approved 2026-11-16)
+
+Show Who We Are and What We Do before the About video; use the content width for its uncropped preview, prepare the YouTube player behind it and provide a direct fallback. Measure and improve critical heading font loading without changing unrelated project banners.
+
 ## REQ-0035 About page, channel and descriptive text (approved 2026-11-16)
 
 Update the YouTube channel URL; order About introduction, prepared user-initiated video, and services description; retain uncropped height-capped media and fallback; align descriptive text responsively.

@@ -1,3 +1,7 @@
+## 2026-11-16 — REQ-0036 verification
+
+Local Chrome checked About at 320, 390, 768 and 1440px, responsive framing, simulated ready/error and keyboard states, blocked YouTube and disabled JavaScript. Independent verification confirmed actual YouTube playback at 390px and 15 route loads at 390px without horizontal overflow or uncaught page errors. A throttled About sample showed the Anek 700 font request start at approximately 20ms with preload versus 1504ms before; results vary by network. Static syntax and diff checks passed. The player grows to its existing 202px minimum on narrow screens; physical devices, Safari, production and complete cross-site interactions were not tested.
+
 ## 2026-11-16 — REQ-0034 and REQ-0035 verification
 
 Independent local Chrome checks covered 15 routes at 320, 640, 641 and 1440px in both languages with no horizontal document overflow. All JSON-LD parsed and channel URLs were updated. Eager YouTube player loaded paused and played after activation. Independent Chrome recheck confirmed fallback visible before playback and on pause or error, hidden while playing; bilingual privacy and cookie disclosures reflect eager loading. The shared header overflows at 241–242px; Safari, physical devices, channel ownership and production remain unverified. JavaScript syntax and git diff --check passed.

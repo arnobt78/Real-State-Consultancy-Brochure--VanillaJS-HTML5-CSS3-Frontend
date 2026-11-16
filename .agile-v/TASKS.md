@@ -1,3 +1,7 @@
+## REQ-0036
+
+- Implemented on preview-branch; local Chrome and independent verification covered About order, preview, playback, fallback and route smoke checks. See VALIDATION_SUMMARY.md for limitations.
+
 ## REQ-0035
 
 - Implemented and independently checked in local Chrome, including actual playback, blocked fallback and bilingual mobile/desktop layout; shared header overflow at 241–242px and physical-device/cross-browser checks remain. Preserve REQ-0034.

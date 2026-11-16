@@ -1,3 +1,9 @@
+## 2026-11-16 — About order and video loading
+
+- REQ-0036 implemented on `preview-branch`: both About text sections precede the content-width video; the thumbnail covers the eagerly prepared player, with fallback retained. Anek 700 is preloaded on About and FAQ after a throttled local measurement.
+- Independent Chrome verification confirmed actual playback and 15-route mobile smoke checks; see VALIDATION_SUMMARY.md. The activated player retains its narrow-screen minimum height. Safari, physical devices, production and full regression coverage remain unverified.
+- The user authorized commit, push, PR and squash merge through `preview-branch`; complete the PR workflow and verify deployment separately.
+
 ## 2026-11-16 — About page and channel updates
 
 - REQ-0035 implemented on `preview-branch`, preserving REQ-0034. Independent Chrome checks at 320px and 1440px in both languages confirmed eager paused player, actual playback, blocked-player fallback and responsive typography; JSON-LD parsed on all 15 pages with 33 updated channel references. At 241–242px the existing shared header overflows; physical devices, other browsers and channel ownership remain unverified. Full-width cover at a 1140×562px frame would crop about 40px from the video top and bottom; retained the uncropped height-capped frame. Independent verification also covered 15 routes at 320, 640, 641 and 1440px in both languages; see VALIDATION_SUMMARY.md. The user authorized push, PR and squash merge on preview-branch.

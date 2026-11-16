@@ -290,10 +290,12 @@ body[data-page="about"] .about-video { margin-top: 28px }
 .about-video.video-activated { min-height: 202px }
 @media (min-width: 861px) {
   /* Convert the available height (viewport minus 238px) to a 16:9 width. */
-  .about-video, .proj-banner { width: min(100%, max(359.12px, calc(177.7778vh - 423.111px))); width: min(100%, max(359.12px, calc(177.7778svh - 423.111px))) }
+  .proj-banner { width: min(100%, max(359.12px, calc(177.7778vh - 423.111px))); width: min(100%, max(359.12px, calc(177.7778svh - 423.111px))) }
 }
-.about-video { outline: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); box-shadow: var(--frame-glow); margin-bottom: 28px }
-.about-video iframe { display: block; width: 100%; height: 100%; border: 0 }
+.about-video { position: relative; outline: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); box-shadow: var(--frame-glow); margin-bottom: 28px }
+.about-video iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; visibility: hidden }
+.about-video.video-playing iframe { visibility: visible }
+.about-video.video-playing .video-preview { display: none }
 .video-preview { display: grid; position: relative; width: 100%; height: 100%; place-items: center; background: #111 }
 .video-preview img { position: absolute; width: 100%; height: 100%; object-fit: contain }
 .video-play { position: relative; display: grid; place-items: center; width: 68px; height: 48px; border-radius: 12px; background: #e00; color: #fff; font-size: 26px }
