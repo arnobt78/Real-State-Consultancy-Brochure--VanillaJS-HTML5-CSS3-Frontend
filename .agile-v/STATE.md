@@ -1,3 +1,8 @@
+## 2026-11-16 — dialog and contact UI polish
+
+- REQ-0033 is approved and implemented on `preview-branch`. Preserve the pre-existing README.md change.
+- Independent Chrome checks passed for dialog focus and Escape, keyboard radio focus and selection, six banners, and 18px About/FAQ text at phone and desktop widths. All three stages generated matching WhatsApp previews and link text in both languages; no message was sent. Physical devices, Safari and production were not checked. User authorized commit, push, PR and squash merge, including the modified README; see VALIDATION_SUMMARY.md for verification and limitations.
+
 ## 2026-11-16 — active navigation typography
 
 - The user approved REQ-0032. The shared active navigation rule now inherits the default link weight; active color and hover styles remain.

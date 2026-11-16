@@ -1,3 +1,7 @@
+## REQ-0033 Dialog, contact and typography polish (approved 2026-11-16)
+
+Center the gallery close icon with touch-aware focus styling; restore compact native project-stage radios; eliminate banner frame gaps without image distortion; align About body and FAQ answer text at 18px. Preserve interactions and accessibility.
+
 ## REQ-0032 Active navigation typography (approved 2026-11-16)
 
 Active desktop and mobile navigation links use the same font size and weight as inactive links while retaining the existing active color, hover and focus behavior.

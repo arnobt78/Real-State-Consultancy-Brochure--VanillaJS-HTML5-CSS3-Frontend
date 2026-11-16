@@ -1,3 +1,7 @@
+## 2026-11-16 — REQ-0033 UI polish
+
+Independent local Chrome checks at 320px and 1440px covered all six banners, dialog focus and Escape, radio keyboard focus and selection, and 18px About/FAQ body text. All three contact stages generated matching WhatsApp preview and link text in both languages; no message was sent. `node --check public/js/site.js` and `git diff --check` passed. The user-provided README is included; its real-estate keywords contain repetitions and business claims were not independently confirmed. Safari, physical devices, production UI, and full-site performance remain unverified.
+
 ## 2026-11-16 — REQ-0032 navigation typography
 
 Independent headless Chrome checks of the shared Home navigation at 320×800 and 1440×900 confirmed equal computed font size and weight for all six links in Bangla and English; active color and hover rules remain. All 15 HTML pages contain the shared navigation. `node --check public/js/site.js` and `git diff --check` passed. A rate-limited live About HTML request returned HTTP 200 in 0.56 seconds; this is not a full navigation measurement. Route clicks, Safari, physical devices, production with the new CSS, and actual slow-network rendering remain unverified.

@@ -46,6 +46,7 @@
     var galleryDialog = document.createElement('dialog');
     galleryDialog.className = 'gallery-dialog';
     galleryDialog.setAttribute('aria-labelledby', 'gallery-dialog-title');
+    galleryDialog.addEventListener('keydown', function () { galleryDialog.classList.remove('pointer-open'); });
     document.body.appendChild(galleryDialog);
     var galleryTrigger = null;
     galleryDialog.addEventListener('close', function () { if (galleryTrigger) galleryTrigger.focus(); });
@@ -62,10 +63,11 @@
         media.className = 'gallery-dialog-media';
         var close = document.createElement('button');
         close.type = 'button'; close.className = 'gallery-dialog-close';
-        close.innerHTML = '<span aria-hidden="true">×</span><span class="video-label" lang="bn">বন্ধ করুন</span><span class="video-label" lang="en">Close</span>';
+        close.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg><span class="video-label" lang="bn">বন্ধ করুন</span><span class="video-label" lang="en">Close</span>';
         close.addEventListener('click', function () { galleryDialog.close(); });
         media.appendChild(image); media.appendChild(close);
         galleryDialog.replaceChildren(media, details);
+        galleryDialog.classList.toggle('pointer-open', event.detail !== 0);
         try { galleryDialog.showModal(); } catch (e) { return; }
         event.preventDefault(); galleryTrigger = link; close.focus();
       });

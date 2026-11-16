@@ -266,7 +266,7 @@ section { padding-block: 72px }
 .page-head h1 { font-size: clamp(32px, 4.6vw, 52px); font-weight: 800; font-stretch: 92% }
 .page-head p { color: var(--ink-2); max-width: 44rem; margin-top: 12px; font-size: 18px }
 .page-head .about-intro-heading { font-size: clamp(22px, 2.4vw, 28px); margin-top: 28px }
-body[data-page="about"] .page-head > p:not(.video-fallback), body[data-page="about"] .vision p { font-size: 16px }
+body[data-page="about"] .page-head > p:not(.video-fallback), body[data-page="about"] .vision p { font-size: 18px }
 body[data-page="about"] .page-head .about-intro-heading { font-size: clamp(18px, 2vw, 22px); font-weight: 700 }
 .doc { max-width: 44rem; display: flex; flex-direction: column; gap: 28px; padding-block: 28px 72px }
 .doc section { display: flex; flex-direction: column; gap: 8px }
@@ -278,7 +278,7 @@ body[data-page="about"] .page-head .about-intro-heading { font-size: clamp(18px,
 .faq { border-top: 1px solid var(--line); margin-block: 8px 48px }
 .faq-item { padding: 20px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px }
 .faq-item h2 { font-size: clamp(18px, 2vw, 22px); font-weight: 700 }
-.faq-item p { color: var(--ink-2); font-size: 16px; max-width: 46rem }
+.faq-item p { color: var(--ink-2); font-size: 18px; max-width: 46rem }
 .faq-item a { color: var(--brand-text); font-weight: 600; text-decoration: none }
 .faq-item a:hover { text-decoration: underline }
 
@@ -329,7 +329,7 @@ a.proj:hover { transform: translateY(-3px); border-color: var(--brand-text) }
 .proj-body { padding: 0 16px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; min-width: 0 }
 .proj-body h2 { margin: 0; font-size: 19px; font-weight: 600 }
 .proj-body p { margin: 0; color: var(--ink-2); font-size: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
-.proj-banner { display: block; object-fit: contain; object-position: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; margin-bottom: 28px }
+.proj-banner { display: block; object-fit: contain; object-position: center; background: var(--surface); outline: 1px solid var(--line); border-radius: 18px; margin-bottom: 28px }
 .proj-facts { background: var(--band); color: var(--band-ink-2); border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; gap: 16px; margin: 8px 0 28px }
 .proj-facts[hidden] { display: none }
 .proj-facts h2 { margin: 0; color: var(--band-ink); font-size: 22px }
@@ -352,6 +352,8 @@ a.proj:hover { transform: translateY(-3px); border-color: var(--brand-text) }
 .gallery-dialog-media { position: relative; display: grid; place-items: center; background: var(--bg) }
 .gallery-dialog-media img { display: block; max-width: 100%; max-height: 70vh; max-height: 70dvh; width: auto; height: auto; object-fit: contain; border-radius: 18px }
 .gallery-dialog-close { appearance: none; -webkit-appearance: none; position: absolute; top: 10px; left: 10px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255, 255, 255, .65); border-radius: 50%; background: rgba(0, 0, 0, .8); color: #fff; font: 28px/1 system-ui, sans-serif; cursor: pointer }
+.gallery-dialog-close svg { display: block; width: 24px; height: 24px }
+.gallery-dialog.pointer-open .gallery-dialog-close:focus-visible { outline: none }
 .gallery-dialog-close:focus-visible { outline-offset: -4px; border-radius: 50% }
 .proj-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; margin-bottom: 28px }
 @media (max-width: 860px) { .proj-grid { grid-template-columns: repeat(2, 1fr) } .proj-gallery { grid-template-columns: 1fr } }
@@ -376,7 +378,8 @@ form.enq, .sent { background: var(--surface); border: 1px solid var(--line); bor
 .f .err { color: var(--brand-text); font-size: 14px }
 .radios { display: flex; flex-wrap: wrap; gap: 8px }
 .radios label { font-weight: 500; display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1.5px solid var(--line); border-radius: 999px; cursor: pointer; font-size: 15px }
-.radios input { width: auto; accent-color: var(--brand) }
+.f .radios input { width: 16px; height: 16px; min-height: 0; padding: 0; border: 0; background: transparent; flex: 0 0 16px; accent-color: var(--brand) }
+.f .radios input:focus-visible { outline: 3px solid var(--brand-text); outline-offset: 3px; border-radius: 50% }
 .radios label:has(input:checked) { border-color: var(--brand-text); background: var(--brand-soft) }
 .sent { grid-template-columns: minmax(0, 1fr); gap: 14px }
 .sent h3 { font-size: 24px }
