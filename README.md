@@ -1,18 +1,18 @@
-# Build Safe Engineering & Consultancy - JavaScript, HTML, CSS Official Website
+# Build Safe Engineering & Consultancy - Vanilla JavaScript, HTML, CSS Official Website for Real Estate as a Service (REaaS)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![HTML](https://img.shields.io/badge/HTML-5-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS-3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES5-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-A bilingual Bangla and English brochure for Build Safe Engineering & Consultancy in Dhaka. The pages are static files in `public/`. There is no framework, no build step, no package install, and no server.
+A bilingual Bangla & English brochure for Real Estate as a Service (REaaS) by Build Safe Engineering and Consultancy Dhaka, Bangladesh based company. This is the official website for the company. The pages are static files in `public/`. There is no framework, no build step, no package install, and no server.
 
 Bangla is the language on screen until the visitor chooses English. Both languages are written in the same HTML file. A small script shows one of them. The contact form checks the name and mobile number in the browser, then prepares a WhatsApp message. The site does not store that message.
 
 The consultancy owner is Md Mamunoor Rasid ([LinkedIn](https://www.linkedin.com/in/md-mamunoor-rashid/)). Questions about this repository can go to [Arnob Mahmud](https://www.arnobmahmud.com/) at [contact@arnobmahmud.com](mailto:contact@arnobmahmud.com).
 
+- **Official site:** the pages name [https://buildsafe.com.bd/](https://buildsafe.com.bd/) in their canonical and share tags. Cloudflare is managed outside this repository.
 - **Test site:** [https://build-safe-testing.vercel.app/](https://build-safe-testing.vercel.app/) serves this folder. Vercel Production follows `main`.
-- **Official site address:** the pages name `https://buildsafe.com.bd/` in their canonical and share tags. Cloudflare is managed outside this repository and may still be an older copy.
 - **Security:** private reports go to [SECURITY.md](SECURITY.md).
 
 ---
@@ -59,17 +59,17 @@ There is no account, database, API, or admin screen.
 
 ## What you will learn
 
-| Topic                                      | Where it lives                                            |
-| ------------------------------------------ | --------------------------------------------------------- |
-| One HTML file per route                    | `public/` and `public/*/index.html`                       |
-| Shared layout, color, and type             | `public/css/site.css`                                     |
-| Menu, language, form, copy, home photo cycle | `public/js/site.js`                                |
-| Two languages in one file                  | `lang="bn"` and `lang="en"` spans, plus `data-lang`       |
-| Saved language before first paint          | The short script in each page `<head>`                    |
-| Browser-only form check                    | The `#enq` block in `public/js/site.js`                   |
-| Old home links                             | `/#services` and the other home hashes                    |
-| Share tags                                 | `og:` and `twitter:` tags, plus JSON-LD in each page head |
-| Crawl hints                                | `public/robots.txt` and `public/sitemap.xml`              |
+| Topic                                        | Where it lives                                            |
+| -------------------------------------------- | --------------------------------------------------------- |
+| One HTML file per route                      | `public/` and `public/*/index.html`                       |
+| Shared layout, color, and type               | `public/css/site.css`                                     |
+| Menu, language, form, copy, home photo cycle | `public/js/site.js`                                       |
+| Two languages in one file                    | `lang="bn"` and `lang="en"` spans, plus `data-lang`       |
+| Saved language before first paint            | The short script in each page `<head>`                    |
+| Browser-only form check                      | The `#enq` block in `public/js/site.js`                   |
+| Old home links                               | `/#services` and the other home hashes                    |
+| Share tags                                   | `og:` and `twitter:` tags, plus JSON-LD in each page head |
+| Crawl hints                                  | `public/robots.txt` and `public/sitemap.xml`              |
 
 ---
 
@@ -235,17 +235,17 @@ The notice sits at the bottom right. On a phone it stays above the Call us / Con
 
 Headings use Anek Bangla. Body text uses Hind Siliguri. Small labels use IBM Plex Mono. The files are in `public/fonts/` and are licensed under the SIL Open Font License in that folder.
 
-| File                                          | Role                                                       |
-| --------------------------------------------- | ---------------------------------------------------------- |
-| `public/img/logo.png`                         | Header logo and the structured-data logo                   |
-| `public/img/logo-white.png`                   | Logo on the dark header                                    |
-| `public/img/meta-logo.jpg`                    | Picture named in the share tags (2000×2000 JPEG)           |
-| `public/img/favicon.png`                      | Browser icon                                               |
-| `public/img/icon-180.png`                     | Apple touch icon                                           |
-| `public/img/s1.jpg` through `s8.jpg`          | Service pictures. Later ones use `loading="lazy"`          |
+| File                                                     | Role                                                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `public/img/logo.png`                                    | Header logo and the structured-data logo                                                    |
+| `public/img/logo-white.png`                              | Logo on the dark header                                                                     |
+| `public/img/meta-logo.jpg`                               | Picture named in the share tags (2000×2000 JPEG)                                            |
+| `public/img/favicon.png`                                 | Browser icon                                                                                |
+| `public/img/icon-180.png`                                | Apple touch icon                                                                            |
+| `public/img/s1.jpg` through `s8.jpg`                     | Service pictures. Later ones use `loading="lazy"`                                           |
 | `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg` | The five pictures in the home frame. `hero-1.jpeg` is 1024×678. The other four are 1024×768 |
-| `public/img/home-hero/hero-1.png`             | Design detail banner only                                  |
-| `public/img/projects/`                    | Card pictures, banners, and gallery pictures for the six jobs |
+| `public/img/home-hero/hero-1.png`                        | Design detail banner only                                                                   |
+| `public/img/projects/`                                   | Card pictures, banners, and gallery pictures for the six jobs                               |
 
 The home frame is 4:3. It shows `hero-1.jpeg` and its caption when JavaScript is off or motion is reduced. The other four pictures fade in with their own caption, and the side rules follow that line. They hold for 3 seconds, and the next file is decoded before it fades. From 861px up, the diamond row and the caption share one line. Concrete, interior, assessment, and fire cards use 4:3 pictures. Their detail pages keep the poster banners, with the same space above and below the two buttons.
 
@@ -255,7 +255,7 @@ The home frame is 4:3. It shows `hero-1.jpeg` and its caption when JavaScript is
 
 Each page has its own title, description, canonical URL, and social tags. The address written there is `https://buildsafe.com.bd/`. The share picture is `https://buildsafe.com.bd/img/meta-logo.jpg`. The structured-data logo is `https://buildsafe.com.bd/img/logo.png`. The FAQ page also has structured data for the questions printed on that page. The sitemap lists pages only, not images.
 
-Chat and email apps read the address written in the tags. They do not run the page script. The picture file is in this folder, but the tags name it on `buildsafe.com.bd`. A preview of [https://build-safe-testing.vercel.app/](https://build-safe-testing.vercel.app/) stays without that picture until Cloudflare serves this same `public/` folder and a fresh share of `https://buildsafe.com.bd/` is fetched. An older saved card can linger until the app fetches again.
+Chat and email apps read the address written in the tags. They do not run the page script. The picture file is in this folder, but the tags name it on `buildsafe.com.bd`. Cloudflare serves this same `public/` folder and a fresh share of [https://buildsafe.com.bd/](https://buildsafe.com.bd/) is fetched. This is the production site.
 
 Keywords are the ordinary words already on the pages: engineering consultancy, design, testing, material consultancy, Dhaka, and Bangladesh. There is no keywords meta tag.
 
@@ -291,7 +291,7 @@ The public contact details in the HTML are intentional. The form never sends tho
 
 ## Keywords
 
-engineering consultancy, structural design, material testing, concrete testing, material consultancy, Dilara Tower, Hatirpool, Dhaka, Bangladesh, bilingual brochure, static HTML, WhatsApp enquiry, Build Safe Engineering
+engineering consultancy, structural design, material testing, concrete testing, material consultancy, Dilara Tower, Hatirpool, Dhaka, Bangladesh, bilingual brochure, static HTML, WhatsApp enquiry, Build Safe Engineering, Real Estate as a Service (REaaS), Real Estate Development, Real Estate Investment, Real Estate Management, Real Estate Consulting, Real Estate Brokerage, Real Estate Development, Real Estate Investment, Real Estate Management, Real Estate Consulting, Real Estate Brokerage, Build Safe Engineering and Consultancy
 
 ---
 

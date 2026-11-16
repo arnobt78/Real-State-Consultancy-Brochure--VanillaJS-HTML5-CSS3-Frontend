@@ -1,3 +1,7 @@
+## REQ-0033
+
+- Implemented; independent Chrome checks covered dialog focus and Escape, radio keyboard selection, six banners and About/FAQ typography. All three WhatsApp stage previews and links passed in both languages. Safari and physical-device checks remain. Preserve the unrelated README change.
+
 ## REQ-0032
 
 - Implemented on `preview-branch`; focused Chrome CSS checks passed at 320px and 1440px. Independent shared-navigation typography checks passed in both languages; route-click, Safari and physical-device checks remain unverified. See VALIDATION_SUMMARY.md.
