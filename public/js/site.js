@@ -89,7 +89,8 @@
     window.onYouTubeIframeAPIReady = function () {
       if (typeof previousReady === 'function') previousReady();
       new window.YT.Player(player, { events: {
-        onReady: function () { videoFallback.classList.add('video-ready'); },
+        onReady: function (e) { if (e.target.getPlayerState() === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); },
+        onStateChange: function (e) { if (e.data === window.YT.PlayerState.PLAYING) videoFallback.classList.add('video-ready'); else videoFallback.classList.remove('video-ready'); },
         onError: function () { videoFallback.classList.remove('video-ready'); }
       } });
     };

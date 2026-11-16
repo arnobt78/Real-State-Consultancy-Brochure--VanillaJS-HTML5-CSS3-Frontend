@@ -1,6 +1,6 @@
 ## 2026-11-16 — REQ-0034 and REQ-0035 verification
 
-Independent local Chrome checks covered 15 routes at 320, 640, 641 and 1440px in both languages with no horizontal document overflow. All JSON-LD parsed and channel URLs were updated. Eager YouTube player loaded paused, played after activation, and exposed its fallback when blocked. The shared header overflows at 241–242px; Safari, physical devices, channel ownership and production remain unverified. JavaScript syntax and git diff --check passed.
+Independent local Chrome checks covered 15 routes at 320, 640, 641 and 1440px in both languages with no horizontal document overflow. All JSON-LD parsed and channel URLs were updated. Eager YouTube player loaded paused and played after activation. Independent Chrome recheck confirmed fallback visible before playback and on pause or error, hidden while playing; bilingual privacy and cookie disclosures reflect eager loading. The shared header overflows at 241–242px; Safari, physical devices, channel ownership and production remain unverified. JavaScript syntax and git diff --check passed.
 
 ## 2026-11-16 — REQ-0033 UI polish
 
