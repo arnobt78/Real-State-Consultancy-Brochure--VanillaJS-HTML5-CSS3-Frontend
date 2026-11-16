@@ -1,3 +1,7 @@
+## REQ-0032
+
+- Implemented on `preview-branch`; focused Chrome CSS checks passed at 320px and 1440px. Independent shared-navigation typography checks passed in both languages; route-click, Safari and physical-device checks remain unverified. See VALIDATION_SUMMARY.md.
+
 # TASKS
 
 ## 2026-11-15 — UI polish commit preparation
