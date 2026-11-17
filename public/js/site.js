@@ -97,6 +97,7 @@
       player.focus();
     }
     videoPreview.addEventListener('click', function (event) {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       if (youtubePlayer) openVideo();
       else { pendingVideoPlay = true; videoFallback.classList.remove('video-ready'); }
