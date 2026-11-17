@@ -1,3 +1,7 @@
+## 2026-11-17 — Project banners and About layout
+
+Local Chromium checked six project banners, About and FAQ at 320, 390, 768, 1024 and 1440px; independent Chromium checks covered the six banners and About at 390 and 1440px. A sequential smoke test loaded all 15 routes at 320 and 1440px, switched both languages, and found no document overflow, broken completed local images or uncaught JavaScript errors. Local image/script/style references and JSON-LD were checked across all pages; JavaScript syntax and git diff --check passed. Actual YouTube playback, Safari, physical devices, production, comprehensive interaction tests and slow-network navigation performance were not verified in this run.
+
 ## 2026-11-16 — REQ-0036 verification
 
 Local Chrome checked About at 320, 390, 768 and 1440px, responsive framing, simulated ready/error and keyboard states, blocked YouTube and disabled JavaScript. Independent verification confirmed actual YouTube playback at 390px and 15 route loads at 390px without horizontal overflow or uncaught page errors. A throttled About sample showed the Anek 700 font request start at approximately 20ms with preload versus 1504ms before; results vary by network. Static syntax and diff checks passed. The player grows to its existing 202px minimum on narrow screens; physical devices, Safari, production and complete cross-site interactions were not tested.
