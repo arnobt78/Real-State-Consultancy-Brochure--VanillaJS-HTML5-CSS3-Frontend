@@ -1,3 +1,9 @@
+## 2026-11-17 — Project banners and About layout
+
+- Updated six project banners and their references, About copy and vision/mission alignment, and About/FAQ text widths on `preview-branch`. The supplied renamed banner assets are included.
+- Local Chromium checked the affected layouts at 320–1440px; an independent check covered phone and desktop. All 15 routes passed local 320px and 1440px smoke checks and language switching. See VALIDATION_SUMMARY.md for limits.
+- User authorized commit, push, PR and squash merge. GitHub CLI authentication was unavailable during preparation; resume the PR workflow after authentication if needed.
+
 ## 2026-11-16 — About order and video loading
 
 - REQ-0036 implemented on `preview-branch`: both About text sections precede the content-width video; the thumbnail covers the eagerly prepared player, with fallback retained. Anek 700 is preloaded on About and FAQ after a throttled local measurement.
