@@ -1,3 +1,9 @@
+## REQ-0037 WWW canonical origin (approved in conversation 2026-11-18)
+
+Use `https://www.buildsafe.com.bd` for the 15 pages’ canonical and social metadata, site-owned JSON-LD URLs, sitemap entries, and robots sitemap reference. Preserve routes, page content, descriptions, and existing functionality. Update affected current documentation. The existing `REQ-0015` origin and proposed reverse redirect are superseded by this client decision; historical records remain intact.
+
+Acceptance: all page URLs and local assets resolve, page metadata and JSON-LD parse and match their routes, sitemap contains exactly the 15 canonical routes, and targeted browser regression checks pass. A path- and query-preserving apex-to-WWW 301 and live verification are separate Cloudflare follow-up work.
+
 ## REQ-0036 About order, video preview and heading loading (approved 2026-11-16)
 
 Show Who We Are and What We Do before the About video; use the content width for its uncropped preview, prepare the YouTube player behind it and provide a direct fallback. Measure and improve critical heading font loading without changing unrelated project banners.

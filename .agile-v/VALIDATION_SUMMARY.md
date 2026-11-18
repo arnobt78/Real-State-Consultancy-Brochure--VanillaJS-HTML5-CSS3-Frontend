@@ -1,3 +1,7 @@
+## 2026-11-18 — REQ-0037 WWW canonical origin
+
+Independent source verification checked all 15 canonical and Open Graph routes, 30 JSON-LD blocks, 15 unique sitemap entries, the robots sitemap reference, 486 local href/src targets and exact preservation of page HTML apart from the origin substitution. `node --check public/js/site.js` and `git diff --check` passed. Local Chrome exercised 15 routes at 320px and 1440px, both language controls, contact validation and WhatsApp preview, three galleries, menu navigation and browser back; the recorded run had no uncaught exceptions or failed requests. Local timings are not production performance evidence. Safari, physical devices, production, the apex-to-WWW redirect and full interaction coverage remain unverified.
+
 ## 2026-11-17 — Project banners and About layout
 
 Local Chromium checked six project banners, About and FAQ at 320, 390, 768, 1024 and 1440px; independent Chromium checks covered the six banners and About at 390 and 1440px. A sequential smoke test loaded all 15 routes at 320 and 1440px, switched both languages, and found no document overflow, broken completed local images or uncaught JavaScript errors. Local image/script/style references and JSON-LD were checked across all pages; JavaScript syntax and git diff --check passed. Actual YouTube playback, Safari, physical devices, production, comprehensive interaction tests and slow-network navigation performance were not verified in this run.
