@@ -16,3 +16,8 @@ The unused `GATE-0001` form is below. An approval entry must include:
 - No-JavaScript choice, if `REQ-0008` is approved: `show-all-sections` or `contact-fallback-only`
 
 That form is not a reason to revert `public/`.
+
+## 2026-11-18 — WWW migration plan approval
+
+- Approver: human user in conversation; Gate: plan review; resume token: `C1-WWW-0037`; approved requirement: `REQ-0037`.
+- Approved documentation reconciliation, final verification, commit, push, PR, self-review and squash merge through `preview-branch`; retain the branch. Cloudflare redirect configuration remains a later step.

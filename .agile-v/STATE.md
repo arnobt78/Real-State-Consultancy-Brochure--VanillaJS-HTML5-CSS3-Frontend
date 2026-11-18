@@ -1,3 +1,10 @@
+## 2026-11-18 — WWW canonical migration checkpoint
+
+- Cycle C1; `REQ-0037` supersedes the canonical-origin direction in `REQ-0015`. The client selected `https://www.buildsafe.com.bd`. The approved site changes are prepared on `preview-branch`.
+- Local Chrome covered 15 routes at 320px and 1440px, language controls, contact validation and preview, three galleries, navigation, console and network diagnostics. Independent source verification passed. Local timing is not production performance evidence; Safari, physical devices, and production remain unverified.
+- User approved the scoped plan and authorized push, PR and squash merge after verification and checks. GitHub CLI reports no logged-in host; confirm usable authentication before remote actions. Preserve the reusable branch.
+- Next: complete final targeted checks and the authorized PR workflow when GitHub authentication and other prerequisites are met. The live apex-to-WWW redirect and Search Console submission are separate follow-up tasks.
+
 ## 2026-11-17 — Project banners and About layout
 
 - Updated six project banners and their references, About copy and vision/mission alignment, and About/FAQ text widths on `preview-branch`. The supplied renamed banner assets are included.

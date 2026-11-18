@@ -1,3 +1,9 @@
+## 2026-11-18 — WWW canonical migration
+
+- `REQ-0037`: implementation and local verification completed on `preview-branch`; independently recheck the final diff and reconcile current documentation. Preserve historical records.
+- User approved the scoped plan. Once verification and required gates are satisfied, complete the authorized push, PR, self-review and squash merge; retain `preview-branch`. GitHub CLI currently has no authenticated account.
+- After publication, separately verify deployment and configure and test the apex-to-WWW redirect; Search Console submission remains a later step.
+
 ## REQ-0036
 
 - Implemented on preview-branch; local Chrome and independent verification covered About order, preview, playback, fallback and route smoke checks. See VALIDATION_SUMMARY.md for limitations.

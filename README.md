@@ -11,7 +11,7 @@ Bangla is the language on screen until the visitor chooses English. Both languag
 
 The consultancy owner is Md Mamunoor Rasid ([LinkedIn](https://www.linkedin.com/in/md-mamunoor-rashid/)). Questions about this repository can go to [Arnob Mahmud](https://www.arnobmahmud.com/) at [contact@arnobmahmud.com](mailto:contact@arnobmahmud.com).
 
-- **Official site:** the pages name [https://buildsafe.com.bd/](https://buildsafe.com.bd/) in their canonical and share tags. Cloudflare is managed outside this repository.
+- **Official site:** the pages name [https://www.buildsafe.com.bd/](https://www.buildsafe.com.bd/) in their canonical and share tags. Cloudflare is managed outside this repository.
 - **Test site:** [https://build-safe-testing.vercel.app/](https://build-safe-testing.vercel.app/) serves this folder. Vercel Production follows `main`.
 - **Security:** private reports go to [SECURITY.md](SECURITY.md).
 
@@ -114,7 +114,7 @@ public/
 ├── img/                    # logo.png, home-hero/, meta-logo.jpg, s1.jpg–s8.jpg
 ├── fonts/                  # Self-hosted faces and their SIL licenses
 ├── robots.txt
-└── sitemap.xml             # The nine page addresses only
+└── sitemap.xml             # The 15 page addresses only
 ```
 
 `README.md`, `LICENSE`, and `SECURITY.md` sit at the repository root. `docs/` and `.agile-v/` are project notes. They are not part of the published site.
@@ -135,7 +135,9 @@ public/
 | `/privacy/`  | `public/privacy/index.html`  | How the form is used                              |
 | `/cookies/`  | `public/cookies/index.html`  | What the site saves                               |
 
-`public/sitemap.xml` lists those nine addresses. `public/robots.txt` allows crawlers and points at the sitemap. Terms, Privacy, and Cookies stay public. They are not links in the footer.
+The six project detail routes are `/projects/design-technical-support/`, `/projects/concrete-mix-design-testing/`, `/projects/detailed-engineering-assessment/`, `/projects/interior-design/`, `/projects/solar-system-design-installation/`, and `/projects/fire-safety-hvac/`.
+
+`public/sitemap.xml` lists all 15 routes. `public/robots.txt` allows crawlers and points at the sitemap. Terms, Privacy, and Cookies stay public. They are not links in the footer.
 
 An old home link is sent to the real page:
 
@@ -253,9 +255,9 @@ The home frame is 4:3. It shows `hero-1.jpeg` and its caption when JavaScript is
 
 ## Search and link previews
 
-Each page has its own title, description, canonical URL, and social tags. The address written there is `https://buildsafe.com.bd/`. The share picture is `https://buildsafe.com.bd/img/meta-logo.jpg`. The structured-data logo is `https://buildsafe.com.bd/img/logo.png`. The FAQ page also has structured data for the questions printed on that page. The sitemap lists pages only, not images.
+Each page has its own title, description, canonical URL, and social tags. The address written there is `https://www.buildsafe.com.bd/`. The share picture is `https://www.buildsafe.com.bd/img/meta-logo.jpg`. The structured-data logo is `https://www.buildsafe.com.bd/img/logo.png`. The FAQ page also has structured data for the questions printed on that page. The sitemap lists pages only, not images.
 
-Chat and email apps read the address written in the tags. They do not run the page script. The picture file is in this folder, but the tags name it on `buildsafe.com.bd`. Cloudflare serves this same `public/` folder and a fresh share of [https://buildsafe.com.bd/](https://buildsafe.com.bd/) is fetched. This is the production site.
+Chat and email apps read the address written in the tags. They do not run the page script. The picture file is in this folder, but the tags name it on `www.buildsafe.com.bd`. Cloudflare serves the deployed `public/` folder; after deployment, a fresh share of [https://www.buildsafe.com.bd/](https://www.buildsafe.com.bd/) fetches these updated tags.
 
 Keywords are the ordinary words already on the pages: engineering consultancy, design, testing, material consultancy, Dhaka, and Bangladesh. There is no keywords meta tag.
 
