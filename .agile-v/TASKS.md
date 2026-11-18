@@ -1,3 +1,7 @@
+## REQ-0038
+
+- Fire-safety bilingual gallery and six supplied banners implemented; local and independent verification is recorded in VALIDATION_SUMMARY.md. Complete the authorized PR workflow and verify deployment separately.
+
 ## 2026-11-18 — WWW canonical migration
 
 - `REQ-0037`: implementation and local verification completed on `preview-branch`; independently recheck the final diff and reconcile current documentation. Preserve historical records.

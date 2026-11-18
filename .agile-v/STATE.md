@@ -1,3 +1,14 @@
+## 2026-11-18 — Fire gallery and banners
+
+- `REQ-0038` is implemented and locally verified on `preview-branch`; the six supplied banners and fire-safety bilingual gallery card are included. See VALIDATION_SUMMARY.md for checks and limits.
+- The user authorized push, PR and squash merge after checks. Next: synchronize with `main` without discarding work, complete the PR workflow, retain `preview-branch`, and verify deployment separately.
+
+## 2026-11-18 — WWW migration PR merged
+
+- `REQ-0037`: PR #37 squash-merged into `main` as `7e768c2cee9f679e34057921aa048bddf4a1964e`; `preview-branch` is retained. GitGuardian and Vercel checks passed. See VALIDATION_SUMMARY.md for local verification and limits.
+- Immediately after merge, the live WWW home page still declared the non-WWW canonical and the apex returned HTTP 200. Deployment and the separate apex-to-WWW redirect are not yet verified.
+- Next: verify the Cloudflare deployment serves the merged canonical and sitemap, then configure and test the approved path- and query-preserving 301 in Cloudflare as a separate step.
+
 ## 2026-11-18 — WWW canonical migration checkpoint
 
 - Cycle C1; `REQ-0037` supersedes the canonical-origin direction in `REQ-0015`. The client selected `https://www.buildsafe.com.bd`. The approved site changes are prepared on `preview-branch`.
