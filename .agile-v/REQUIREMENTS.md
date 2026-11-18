@@ -1,3 +1,7 @@
+## REQ-0038 Fire safety gallery and project banners (approved 2026-11-18)
+
+Show the fire safety illustration in a bilingual card using the existing shared hover and accessible gallery dialog, with direct image fallback. Preserve existing copy and do not present the illustration as a specific project. Include the six supplied replacement project banners with their existing paths and proportions. Preserve other galleries and project routes.
+
 ## REQ-0037 WWW canonical origin (approved in conversation 2026-11-18)
 
 Use `https://www.buildsafe.com.bd` for the 15 pages’ canonical and social metadata, site-owned JSON-LD URLs, sitemap entries, and robots sitemap reference. Preserve routes, page content, descriptions, and existing functionality. Update affected current documentation. The existing `REQ-0015` origin and proposed reverse redirect are superseded by this client decision; historical records remain intact.

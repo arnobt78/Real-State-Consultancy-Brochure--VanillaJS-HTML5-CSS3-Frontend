@@ -1,3 +1,7 @@
+## 2026-11-18 — REQ-0038 fire gallery and banners
+
+Local Chrome at 320px and 1440px checked all six replacement banners, both languages, fire card hover and keyboard Enter, dialog Escape and focus return, direct image link with scripts disabled, and existing design, concrete and solar dialogs. All 15 routes passed smoke checks; the successful run recorded no console exceptions, failed requests or HTTP errors. An independent reviewer checked the same banner and dialog behavior. JavaScript syntax and Git diff checks passed. A prior local run saw transient home image failures; the sequential rerun passed. Safari, physical devices, production and complete interaction coverage remain unverified.
+
 ## 2026-11-18 — REQ-0037 WWW canonical origin
 
 Independent source verification checked all 15 canonical and Open Graph routes, 30 JSON-LD blocks, 15 unique sitemap entries, the robots sitemap reference, 486 local href/src targets and exact preservation of page HTML apart from the origin substitution. `node --check public/js/site.js` and `git diff --check` passed. Local Chrome exercised 15 routes at 320px and 1440px, both language controls, contact validation and WhatsApp preview, three galleries, menu navigation and browser back; the recorded run had no uncaught exceptions or failed requests. Local timings are not production performance evidence. Safari, physical devices, production, the apex-to-WWW redirect and full interaction coverage remain unverified.
