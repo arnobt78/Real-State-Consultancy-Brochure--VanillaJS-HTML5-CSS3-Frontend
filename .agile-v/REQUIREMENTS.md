@@ -1,3 +1,7 @@
+## REQ-0039 About page heading (approved 2026-11-19)
+
+Retain the existing bilingual About us label as the page heading with its current appearance; remove the separate Who We Are heading. Preserve the introductory paragraphs, What We Do section, video, and other page content. Keep one semantic h1 and check both languages and responsive themes. This replaces the Who We Are heading specified by REQ-0027 and REQ-0036.
+
 ## REQ-0038 Fire safety gallery and project banners (approved 2026-11-18)
 
 Show the fire safety illustration in a bilingual card using the existing shared hover and accessible gallery dialog, with direct image fallback. Preserve existing copy and do not present the illustration as a specific project. Include the six supplied replacement project banners with their existing paths and proportions. Preserve other galleries and project routes.

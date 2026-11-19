@@ -1,3 +1,7 @@
+## 2026-11-19 — REQ-0039 About heading
+
+Independent local Chrome checks passed at 320px and 1440px, in both languages and light/dark themes: one semantic heading, previous label styling and wrapping, unchanged introduction, navigation and video fallback presence. No runtime exceptions were recorded; JavaScript syntax and Git diff checks passed. Actual YouTube playback, Safari, physical devices and production remain unverified.
+
 ## 2026-11-18 — REQ-0038 fire gallery and banners
 
 Local Chrome at 320px and 1440px checked all six replacement banners, both languages, fire card hover and keyboard Enter, dialog Escape and focus return, direct image link with scripts disabled, and existing design, concrete and solar dialogs. All 15 routes passed smoke checks; the successful run recorded no console exceptions, failed requests or HTTP errors. An independent reviewer checked the same banner and dialog behavior. JavaScript syntax and Git diff checks passed. A prior local run saw transient home image failures; the sequential rerun passed. Safari, physical devices, production and complete interaction coverage remain unverified.

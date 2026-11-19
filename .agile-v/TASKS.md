@@ -1,3 +1,7 @@
+## REQ-0039
+
+- About heading implemented and independently checked. Complete the authorized PR workflow and verify deployment separately.
+
 ## REQ-0038
 
 - Fire-safety bilingual gallery and six supplied banners implemented; local and independent verification is recorded in VALIDATION_SUMMARY.md. Complete the authorized PR workflow and verify deployment separately.
