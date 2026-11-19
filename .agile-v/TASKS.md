@@ -1,3 +1,7 @@
+## REQ-0040
+
+- About section headings use matching bilingual styles and passed local and independent checks. Complete the authorized PR workflow; verify deployment separately.
+
 ## REQ-0039
 
 - About heading implemented and independently checked. Complete the authorized PR workflow and verify deployment separately.

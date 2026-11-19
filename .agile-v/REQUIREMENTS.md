@@ -1,3 +1,7 @@
+## REQ-0040 About section heading consistency (approved 2026-11-19)
+
+Style the bilingual What We Do h2 like the existing About us h1, preserving its heading level, section spacing, content and other page behavior.
+
 ## REQ-0039 About page heading (approved 2026-11-19)
 
 Retain the existing bilingual About us label as the page heading with its current appearance; remove the separate Who We Are heading. Preserve the introductory paragraphs, What We Do section, video, and other page content. Keep one semantic h1 and check both languages and responsive themes. This replaces the Who We Are heading specified by REQ-0027 and REQ-0036.
