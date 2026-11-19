@@ -1,7 +1,7 @@
 ## 2026-11-19 — About page heading
 
 - `REQ-0039` is implemented on `preview-branch`: the existing bilingual About label is the semantic h1; the separate Who We Are heading is removed, with introduction and other content preserved.
-- Local and independent Chrome checks passed at 320px and 1440px in both languages and light/dark themes, including matching the former label's computed style and text wrapping, heading semantics, video fallback presence and navigation. Actual YouTube playback, Safari, physical devices and production remain unverified.
+- Local and independent verification passed; see `VALIDATION_SUMMARY.md` for coverage and limitations.
 - The user authorized push, PR and squash merge following verification. Next: complete the PR workflow on the reusable branch and verify deployment separately. Preserve the earlier PR #38 handoff below.
 
 ## 2026-11-18 — Fire gallery PR merged
