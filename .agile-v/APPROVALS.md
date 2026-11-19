@@ -21,3 +21,7 @@ That form is not a reason to revert `public/`.
 
 - Approver: human user in conversation; Gate: plan review; resume token: `C1-WWW-0037`; approved requirement: `REQ-0037`.
 - Approved documentation reconciliation, final verification, commit, push, PR, self-review and squash merge through `preview-branch`; retain the branch. Cloudflare redirect configuration remains a later step.
+
+## 2026-11-19 — About heading plan approval
+
+- Approver: human user in conversation; Gate: plan review; resume token: `C1-ABOUT-0039`; approved requirement: `REQ-0039`.
