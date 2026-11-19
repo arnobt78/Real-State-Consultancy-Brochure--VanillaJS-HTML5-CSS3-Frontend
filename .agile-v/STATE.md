@@ -1,3 +1,14 @@
+## 2026-11-19 — About section heading consistency
+
+- `REQ-0040` is implemented on `preview-branch`: the bilingual What We Do h2 uses the same label styling as About us, retaining 28px section spacing.
+- Local and independent verification passed; see `VALIDATION_SUMMARY.md` for coverage and limitations.
+- User authorized push, PR and squash merge following verification. Next: complete the PR workflow on the reusable branch and verify deployment separately. Preserve the prior PR #39 handoff below.
+
+## 2026-11-19 — About heading PR merged
+
+- `REQ-0039`: PR #39 squash-merged into `main` as `9e54616a140765d9abe0d08108d588803c99acb4`. GitGuardian passed; CodeRabbit passed the original review and skipped the documentation-only follow-up. `preview-branch` is retained.
+- Next: verify the deployed About page separately. Actual YouTube playback, Safari, physical devices and production remain unverified. Continue the separate WWW redirect follow-up when requested.
+
 ## 2026-11-19 — About page heading
 
 - `REQ-0039` is implemented on `preview-branch`: the existing bilingual About label is the semantic h1; the separate Who We Are heading is removed, with introduction and other content preserved.
