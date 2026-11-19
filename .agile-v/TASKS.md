@@ -1,3 +1,7 @@
+## REQ-0041
+
+- Bold About headings implemented and independently verified. Complete the authorized PR workflow and verify deployment separately.
+
 ## REQ-0040
 
 - About section headings use matching bilingual styles and passed local and independent checks. Complete the authorized PR workflow; verify deployment separately.

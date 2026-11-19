@@ -9,3 +9,4 @@ Append-only.
 | CP-0002 | 2026-11-18 | APPROVED | `C1-WWW-0037` | Plan review | Human approved the plan in conversation; see APPROVALS.md. |
 | CP-0003 | 2026-11-19 | APPROVED | `C1-ABOUT-0039` | Plan review | User approved the About heading plan in conversation. |
 | CP-0004 | 2026-11-19 | APPROVED | `C1-ABOUT-0040` | Plan review | User approved the heading consistency plan in conversation. |
+| CP-0005 | 2026-11-19 | APPROVED | `C1-ABOUT-0041` | Plan review | User approved the bold headings plan in conversation. |

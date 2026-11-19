@@ -1,3 +1,7 @@
+## REQ-0041 Bold About section headings (approved 2026-11-19)
+
+Make both bilingual About us and What We Do headings bold while retaining the existing fonts, sizes, colors, spacing, text and semantic heading levels. Preserve other page behavior.
+
 ## REQ-0040 About section heading consistency (approved 2026-11-19)
 
 Style the bilingual What We Do h2 like the existing About us h1, preserving its heading level, section spacing, content and other page behavior.
