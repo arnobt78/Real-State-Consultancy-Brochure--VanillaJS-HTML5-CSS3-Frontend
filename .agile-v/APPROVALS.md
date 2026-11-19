@@ -29,3 +29,7 @@ That form is not a reason to revert `public/`.
 ## 2026-11-19 — About section headings plan approval
 
 - Approver: human user in conversation; Gate: plan review; resume token: `C1-ABOUT-0040`; approved requirement: `REQ-0040`.
+
+## 2026-11-19 — Bold About headings plan approval
+
+- Approver: human user in conversation; Gate: plan review; resume token: `C1-ABOUT-0041`; approved requirement: `REQ-0041`.

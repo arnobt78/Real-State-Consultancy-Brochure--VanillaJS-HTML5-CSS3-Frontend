@@ -1,3 +1,7 @@
+## 2026-11-19 — REQ-0041 bold About headings
+
+Local and independent Chrome checks at 320px and 1440px in Bangla and English and light/dark themes confirmed matching bold heading and span weights, h1/h2 hierarchy, 28px section spacing, navigation and video fallback presence. No runtime exceptions were recorded; JavaScript syntax and Git diff checks passed. The existing fonts may synthesize bold. Actual video playback, Safari, physical devices and production remain unverified.
+
 ## 2026-11-19 — REQ-0040 About section headings
 
 Local and independent Chrome checks at 320px and 1440px in Bangla and English and light/dark themes confirmed matching heading and language-span typography, retained h1/h2 semantics, 28px section spacing, language visibility, navigation and video fallback presence. No runtime exceptions were recorded. JavaScript syntax and Git diff checks passed. Actual video playback, Safari, physical devices and production remain unverified.

@@ -1,3 +1,13 @@
+## 2026-11-19 — Bold About headings
+
+- `REQ-0041` is implemented on `preview-branch`; both About headings are bold in Bangla and English. See `VALIDATION_SUMMARY.md` for checks and limitations.
+- The user authorized push, PR and squash merge after verification. Next: complete the PR workflow, retain `preview-branch`, and verify deployment separately.
+
+## 2026-11-19 — About section headings PR merged
+
+- `REQ-0040`: PR #40 squash-merged into `main` as `60103ad7ca7992555e9998c178c7bc2b69626f36`. GitGuardian passed; CodeRabbit skipped the PR. `preview-branch` is retained.
+- Next: verify the deployed About page separately. Actual video playback, Safari, physical devices and production remain unverified. Continue the separate WWW redirect follow-up when requested.
+
 ## 2026-11-19 — About section heading consistency
 
 - `REQ-0040` is implemented on `preview-branch`: the bilingual What We Do h2 uses the same label styling as About us, retaining 28px section spacing.
